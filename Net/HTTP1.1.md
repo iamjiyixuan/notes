@@ -54,7 +54,7 @@ Host: www.google.com    # 必须携带 HOST 头部
     - 语义不同。GET 表示获取资源，POST 表示提交或修改资源
     - GET 幂等，POST 非幂等
     - GET 会被缓存，POST 不会
-    - 一般 GET 参数采用 querystring 拼接在请求行的 URI 中，POST 参数放在 body 中，通过 Content-Type 指定格式（这是浏览器的规范，RFC 中并咩有规定 GET 不能用 body，POST 不能用 querystring）
+    - 一般 GET 参数采用 querystring 拼接在请求行的 URI 中，POST 参数放在 body 中，通过 Content-Type 指定格式（这是浏览器的规范，RFC 中并没有规定 GET 不能用 body，POST 不能用 querystring）
 
 #### 响应格式
 ```
@@ -72,7 +72,7 @@ Connection: keep-alive
 - 3xx：重定向
     - 301 Moved Permanently。永久重定向
     - 307 Temporary Redirect。临时重定向
-    - 307 Internal Redirect。浏览器内部重定向，一般用于 http 转 https。详见 [HSTS 机制](#hsts-%E6%9C%BA%E5%88%B6)
+    - 307 Internal Redirect。浏览器内部重定向，一般用于 http 转 https。详见 [HSTS 机制](#hsts-%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6)
 - 4xx：客户端错误
     - 400 Bad Request。服务器认为客户端出现了错误，但不能明确是哪种错误，例如 HTTP 请求格式错误
     - 403 Forbidden。没有权限
@@ -85,8 +85,25 @@ Connection: keep-alive
 ```
 Connection: keep-alive
 ```
+- 开启 keep-alive 后，完成一次请求响应后，TCP 连接不会断开
+- 浏览器只能通过 Content-Length 来判断响应内容的边界，如果 Content-Length 不传或大于实际内容，浏览器会一直 pending
 
 ### 分块传输
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
+
+7\r\n            # 长度 + CRLF
+Mozilla\r\n      # 数据 + CRLF
+9\r\n
+Developer\r\n
+7\r\n
+Network\r\n
+0\r\n           # 终止块是一个特殊的数据块, 其长度为 0
+\r\n
+```
+解决一些场景下 Content-Length 无法获取到的问题
 
 ### 缓存控制
 
@@ -119,8 +136,55 @@ Non-Authoritative-Reason: HSTS
 ## 同源策略
 
 ## 表单提交
+```html
+<form method="POST" action="http://localhost:3000/upload-profile-pic">
+    <div>
+        <input name="a" />
+        <input name="b" />
+    </div>
+    <div>
+        <input type="submit" name="btn_upload_profile_pic" value="Upload" />
+    </div>
+</form>
+```
+
+> \<form\> 是唯一可以通过 HTML 而不是 ajax 或 fetch 发出 POST 请求的方式
+
+```
+POST http://www.example.com HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=utf-8
+
+a=1&b=2
+```
 
 ## 文件上传
+```html
+<form method="POST" action="http://localhost:3000/upload-profile-pic" enctype="multipart/form-data">
+    <div>
+        <label>Select your profile picture:</label>
+        <input type="file" name="profile_pic" />
+    </div>
+    <div>
+        <input type="submit" name="btn_upload_profile_pic" value="Upload" />
+    </div>
+</form>
+```
+
+```
+POST http://www.example.com HTTP/1.1
+Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryrGKCBY7qhFd3TrwA
+
+------WebKitFormBoundaryrGKCBY7qhFd3TrwA
+Content-Disposition: form-data; name="text"
+
+title
+------WebKitFormBoundaryrGKCBY7qhFd3TrwA
+Content-Disposition: form-data; name="file"; filename="chrome.png"
+Content-Type: image/png
+
+PNG ... content of chrome.png ...
+------WebKitFormBoundaryrGKCBY7qhFd3TrwA--
+```
 
 ## 断点续传
 
@@ -149,3 +213,4 @@ Non-Authoritative-Reason: HSTS
 - [RFC 7234 - Caching](https://tools.ietf.org/html/rfc7234)
 - [RFC 7235 - Authentication](https://tools.ietf.org/html/rfc7235)
 - [HTTP 的前世今生](https://coolshell.cn/articles/19840.html)
+- [HTTP API 认证授权术](https://coolshell.cn/articles/19395.html)
