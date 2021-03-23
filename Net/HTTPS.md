@@ -22,6 +22,7 @@
 - [TLS1.2](#tls12)
 - [TLS1.3](#tls13)
 - [OpenSSL 实战](#openssl-%E5%AE%9E%E6%88%98)
+- [Wireshark 抓包 tls](#wireshark-%E6%8A%93%E5%8C%85-tls)
 - [References](#references)
 
 <!-- /TOC -->
@@ -35,7 +36,7 @@ HTTPS = HTTP over TLS
 ### Hash 算法
 
 ### AES 对称加密
-AES 是当前的对称加密标准算法，以 Rijndael 算法为原型。AES 之前的对称加密算命还有 DES、3DES 等，但均已淘汰。
+AES 是当前的对称加密标准算法，以 Rijndael 算法为原型。AES 之前的对称加密算法还有 DES、3DES 等，但均已淘汰。
 - AES 采用分组加密的工作模式。将明文按数据块大小（16字节）分割为多个数据块，如果最后一个数据块小于 Block Size，则需要填充（padding）
 - AES 采用 PKCS7 填充算法。
 - AES 采用 GCM 分组模式，GCM = CTR + GMAC。GMAC 是一种 hash 算法，解决数据完整性校验
@@ -102,5 +103,20 @@ AES 是当前的对称加密标准算法，以 Rijndael 算法为原型。AES �
 
 ## OpenSSL 实战
 
+## Wireshark 抓包 tls
+
+第一步，通过以下方式启动一个新的 Chrome
+```bash
+$ /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrome --ssl-key-log-file=/tmp/.ssl-key.log
+```
+
+第二步，Wireshark 中 Preferences → Protocols → TLS → (Pre)-Master-Secret log filename 设置为 `/tmp/.ssl-key.log`
+
 ## References
 - [《深入浅出 HTTPS：从原理到实战》](https://book.douban.com/subject/30250772/) by 虞卫东
+- [HTTPS 温故知新（一） —— 开篇](https://halfrost.com/https-begin/)
+- [HTTPS 温故知新（二） —— TLS 记录层协议](https://halfrost.com/https_record_layer/)
+- [HTTPS 温故知新（三） —— 直观感受 TLS 握手流程（上）](https://halfrost.com/https_tls1-2_handshake/)
+- [HTTPS 温故知新（四） —— 直观感受 TLS 握手流程（下）](https://halfrost.com/https_tls1-3_handshake/)
+- [HTTPS 温故知新（五） —— TLS 中的密钥计算](https://halfrost.com/https-key-cipher/)
+- [HTTPS 温故知新（六） —— TLS 中的 Extensions](https://halfrost.com/https-extensions/)
