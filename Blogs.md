@@ -23,6 +23,7 @@
 - [京东凹凸实验室](https://aotu.io/index.html)
 - [百度 FEX](http://fex.baidu.com/)
 - [云音乐大前端专栏](https://musicfe.dev/)
+- [涂鸦大前端](https://juejin.cn/team/6930928760275337230/posts)
 - [小胡子哥](https://www.barretlee.com/entry/)
 - [Piasy](https://blog.piasy.com)，专注于实时多媒体技术
 - [fi3ework](https://github.com/fi3ework/blog)
@@ -54,6 +55,7 @@
 
 ## 后端
 - [纯洁的微笑](http://ityouknow.com)
+- [吴叶磊](https://aleiwu.com/post/) - 关键字：PingCAP、TiDB、Promtheus
 
 ## 设计
 - [腾讯 CDC](https://cdc.tencent.com)
