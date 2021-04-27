@@ -1,11 +1,13 @@
 # AI 算法模型
 
+- ARIMA（Autoregressive Integrated Moving average，自回归移动平均模型），统计学模型，其主要通过 d 阶微分运算将非平稳时间序列转换为平稳时间序列，同时引入自相关系数之后的平稳序列进行分析处理。
 - RBF（Radial Basis Function Network，径向基函数网络），
 - Glove，词向量学习算法
 - Word2vec，是一群用来产生词向量的相关模型。这些模型为浅层双层的神经网络，用来训练以重新建构语言学之词文本。网络以词表现，并且需猜测相邻位置的输入词，在word2vec中词袋模型假设下，词的顺序是不重要的。
 - CNN（Convolutional Neural Network，卷积神经网络），是一种前馈神经网络，它的人工神经元可以响应一部分覆盖范围内的周围单元，对于大型图像处理有出色表现。
+- RNN
 - LSTM（Long Short-Term Memory 长短期记忆），是一种时间循环神经网络（RNN），论文首次发表于 1997 年。由于独特的设计结构，LSTM 适合于处理和预测时间序列中间隔和延迟非常长的重要事件。
-- GRU（Gate Recurrent Unit），是循环神经网络（Recurrent Neural Network, RNN）的一种。和 LSTM一样，也是为了解决长期记忆和反向传播中的梯度等问题而提出来的。
+- GRU（Gate Recurrent Unit），是循环神经网络（Recurrent Neural Network, RNN）的一种。和 LSTM 一样，也是为了解决长期记忆和反向传播中的梯度等问题而提出来的。
 - Seq2seq，是用于自然语言处理的一系列机器学习方法。应用领域包括机器翻译，图像描述，对话模型和文本摘要。
 
 ## 聊天机器人
