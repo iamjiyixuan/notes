@@ -1,7 +1,7 @@
 # 阅读类资料：技术博客 / 专栏 / 知识库 / 电子书
 
 ## 综合
-- ⭐⭐⭐⭐⭐ [酷壳](https://coolshell.cn)，博主陈皓（左耳朵耗子），资深技术专家，骨灰级程序员。同时也推荐他在极客时间的付费专栏[《左耳听风》](https://time.geekbang.org/column/intro/48)。
+- ⭐⭐⭐⭐⭐ [酷壳](https://coolshell.cn)，博主陈皓（左耳朵耗子），[MegaEase](https://megaease.com/) 创始人。同时也推荐他在极客时间的付费专栏[《左耳听风》](https://time.geekbang.org/column/intro/48)。
 - [MacTalk By 池建强](http://macshuo.com)
 - [美团技术团队](https://tech.meituan.com)
 - [携程技术中心](https://zhuanlan.zhihu.com/ctriptech)
