@@ -13,25 +13,29 @@
 - [UCR Time Series Classification Archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/)
 - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
 - [Awesome Public Industrial Datasets](https://github.com/makinarocks/awesome-industrial-machine-datasets)
-- [国家数据](https://data.stats.gov.cn/)
-- [CEIC](https://www.ceicdata.com/zh-hans)
-- [Tushare 大数据开放社区](https://waditu.com/)
-- [JoinQuant 量化平台](https://www.joinquant.com)
-- C-MAPSS
-- [PHM Data Challenge](https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2015/phm-data-challenge-3/)，本身是一个竞赛
+- [国家数据](https://data.stats.gov.cn/)（综合）
+- [CEIC](https://www.ceicdata.com/zh-hans)（金融）
+- [Tushare 大数据开放社区](https://waditu.com/)（金融）
+- [JoinQuant 量化平台](https://www.joinquant.com)（金融）
+- [C-MAPSS](https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan)（工业）
+- [PHM Data Challenge](https://phmsociety.org/conference/annual-conference-of-the-phm-society/annual-conference-of-the-prognostics-and-health-management-society-2015/phm-data-challenge-3/)（工业），本身是一个竞赛
     - [北航可靠性与系统工程学院在亚太区 PHM 国际数据挑战赛中荣获佳绩](https://news.buaa.edu.cn/info/1004/32053.htm) 2017
+    - [独家｜PHM 数据竞赛首个中国夺冠团队经验分享](https://kknews.cc/tech/5xxzoy8.html) 2017
 
 ## 参考资料
 - 剩余寿命（Remaining Useful Life，RUL）
     - [论文 | Predicting Remaining Useful Life using Time Series Embeddings based on Recurrent Neural Networks](https://www.aminer.org/pub/5a260c8117c44a4ba8a30fe8/predicting-remaining-useful-life-using-time-series-embeddings-based-on-recurrent-neural) 2017
     - [论文 | Long Short-Term Memory Network for Remaining Useful Life Estimation](https://ieeexplore.ieee.org/document/7998311/) 2017
     - [论文 | Remaining Useful Life Estimation Using Functional Data Analysis](https://ieeexplore.ieee.org/document/8819420) 2019
+    - [论文 | 融合多传感器数据的发动机剩余寿命预测方法](http://hkxb.buaa.edu.cn/CN/html/20191212.html) 2019
+    - [Jet Engine Remaining Useful Life (RUL) Prediction](https://medium.com/@hamalyas_/jet-engine-remaining-useful-life-rul-prediction-a8989d52f194) | [中文](https://zhuanlan.zhihu.com/p/111898696) 2019
+    - [Pytorch：使用 CNN 实现 C-MAPSS 数据集里面的剩余寿命预测](https://blog.csdn.net/comli_cn/article/details/106713022) 2020
+    - [Tensorflow 2.0：实现 C-MAPSS 数据集的剩余寿命预测](https://www.codeleading.com/article/70484399885/) 2020
 - [论文 | 面向物联网时间序列数据深度学习的 LSTM 方法研究](http://gb.oversea.cnki.net/KCMS/detail/detail.aspx?filename=1018145823.nh&dbcode=CMFD&dbname=CMFDREF) 2018
 - [论文 | LSTM Learning With Bayesian and Gaussian Processing for Anomaly Detection in Industrial IoT](https://ieeexplore.ieee.org/document/8896029) 2020 
 - [7 methods to perform Time Series forecasting (with Python codes)](https://www.analyticsvidhya.com/blog/2018/02/time-series-forecasting-methods/) | [中文](https://zhuanlan.zhihu.com/p/77063373)
 - [深入浅出 LSTM 及其 Python 代码实现](https://www.toutiao.com/i6787727144882536972/?wid=1619584235647)
 - [LSTM 入门例子：根据前 9 年的数据预测后 3 年的客流（PyTorch 实现）](https://zhuanlan.zhihu.com/p/94757947)
-- [使用 CNN 实现 C-MAPSS 数据集里面的剩余寿命预测（Pytorch）](https://blog.csdn.net/comli_cn/article/details/106713022)
-- [Tensorflow 2.0：实现 C-MAPSS 数据集的剩余寿命预测](https://www.codeleading.com/article/70484399885/)
 - [时间序列预测方法总结](https://zhuanlan.zhihu.com/p/67832773)
-- [独家｜PHM 数据竞赛首个中国夺冠团队经验分享](https://kknews.cc/tech/5xxzoy8.html) 2017
+- [干货分享 | 云脑科技核心算法工程师详解时间序列](https://developer.aliyun.com/article/400147)
+- [离散时间序列的几种频谱分析方法的 MATLAB 实现](https://www.bilibili.com/read/cv240064/)

@@ -57,10 +57,11 @@
 
 ## 后端
 - [纯洁的微笑](http://ityouknow.com)
-- [吴叶磊](https://aleiwu.com/post/) -- 关键字：PingCAP、TiDB、Promtheus
+- [吴叶磊](https://aleiwu.com/post/)，专注 PingCAP、TiDB、Promtheus
 
 ## 人工智能
-- [李沐](https://www.zhihu.com/people/mli65)，亚马逊资深首席科学家，[《动手学深度学习》](https://zh-v2.d2l.ai/)作者
+- [李沐](https://www.zhihu.com/people/mli65)，亚马逊资深首席科学家，[《动手学深度学习》](https://zh-v2.d2l.ai/)作者，大佬也玩[B 站](https://space.bilibili.com/1567748478?from=search&seid=15287550712157399477) 233
+- [ezyang’s blog](http://blog.ezyang.com/)，PyTorch 核心开发者
 
 ## 设计
 - [腾讯 CDC](https://cdc.tencent.com)
