@@ -31,6 +31,7 @@
     - [Jet Engine Remaining Useful Life (RUL) Prediction](https://medium.com/@hamalyas_/jet-engine-remaining-useful-life-rul-prediction-a8989d52f194) | [中文](https://zhuanlan.zhihu.com/p/111898696) 2019
     - [Pytorch：使用 CNN 实现 C-MAPSS 数据集里面的剩余寿命预测](https://blog.csdn.net/comli_cn/article/details/106713022) 2020
     - [Tensorflow 2.0：实现 C-MAPSS 数据集的剩余寿命预测](https://www.codeleading.com/article/70484399885/) 2020
+    - [MATLAB 官方示例](https://ww2.mathworks.cn/help/predmaint/examples.html?category=predict-remaining-useful-life&s_tid=CRUX_topnav)
 - [论文 | 面向物联网时间序列数据深度学习的 LSTM 方法研究](http://gb.oversea.cnki.net/KCMS/detail/detail.aspx?filename=1018145823.nh&dbcode=CMFD&dbname=CMFDREF) 2018
 - [论文 | LSTM Learning With Bayesian and Gaussian Processing for Anomaly Detection in Industrial IoT](https://ieeexplore.ieee.org/document/8896029) 2020 
 - [7 methods to perform Time Series forecasting (with Python codes)](https://www.analyticsvidhya.com/blog/2018/02/time-series-forecasting-methods/) | [中文](https://zhuanlan.zhihu.com/p/77063373)
@@ -39,3 +40,13 @@
 - [时间序列预测方法总结](https://zhuanlan.zhihu.com/p/67832773)
 - [干货分享 | 云脑科技核心算法工程师详解时间序列](https://developer.aliyun.com/article/400147)
 - [离散时间序列的几种频谱分析方法的 MATLAB 实现](https://www.bilibili.com/read/cv240064/)
+- [微信后台基于时间序的海量数据冷热分级架构设计实践](https://mp.weixin.qq.com/s/XlZF0GDt7dnHyYuS1an6tg) 2017
+- [微信后台基于时间序的新一代海量数据存储架构的设计实践](http://www.52im.net/thread-2970-1-1.html)
+- 监控 & 运维
+    - [蚂蚁集团智能监控的时序异常检测：基于 CNN 神经网络的异常检测](https://zhuanlan.zhihu.com/p/158490622)
+    - [清华最新 AIOps 案例：强化学习，降低网络传输延时](https://www.bizseer.com/index.php?m=content&c=index&a=show&catid=26&id=13) 2019
+    - [AIOps 在美团的探索与实践 - 故障发现篇](https://tech.meituan.com/2020/10/15/mt-aiops-horae.html) 2020
+- RNN
+    - [The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) | [中](https://www.itread01.com/content/1546098492.html)
+    - [Pytorch 实现 RNN](https://zhuanlan.zhihu.com/p/71732459)
+    - [读 PyTorch 源码学习 RNN（1）](https://zhuanlan.zhihu.com/p/32103001)
