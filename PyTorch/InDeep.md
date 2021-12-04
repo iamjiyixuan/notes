@@ -1,0 +1,77 @@
+# 深入 PyTorch
+
+- 整体工作流
+    - [想读读 PyTorch 底层代码？这份内核机制简介送给你](https://juejin.cn/post/6844903785198780424)
+    - imperative / eager 的范式，每一行代码都要求构建一个图以定义完整计算图的一个部分
+    - 动态计算图 define-by-run，完整的计算图还没有完成构建，我们也可以独立地执行这些作为组件的小计算图
+- 张量
+    - ATen 库
+    - 自动微分 Autograd
+- JIT
+    - TorchScript
+    - [PyTorch JIT](https://zhuanlan.zhihu.com/p/370455320)
+- 并行计算/分布式
+    - https://yangkky.github.io/2019/07/08/distributed-pytorch-tutorial.html
+    - https://zhuanlan.zhihu.com/p/178402798
+    - https://zhuanlan.zhihu.com/p/76638962
+    - GPU
+        - 免费 GPU 资源
+            - https://colab.research.google.com/
+    - 分布式训练方法
+        - 同步训练：所有的 worker 读取 mini-batch 的不同部分，同步计算损失函数的 gradient，最后将每个 worker 的 gradient 整合之后更新模型。通常利用 AllReduce 算法来整合不同 worker 计算的 gradient
+        - 异步训练：每个 worker 独立读取训练数据，异步更新模型参数。基于参数服务器架构（parameter server）
+    - 分布式训练方案
+        - PyTorch-DDP
+        - Horovod
+        - https://github.com/BaguaSys/bagua
+            - [突破 PyTorch、TensorFlow 并行瓶颈的开源训练加速框架到底是啥？](https://www.infoq.cn/article/vhnupqbbomcmjc4sxu4b)
+    - Gradient AllReduce 算法
+        - [关于 AllReduce](https://zhuanlan.zhihu.com/p/100012827)
+    - 梯度压缩算法
+        - PyTorch PowerSGD
+        - Bagua ByteGrad
+    - 通信算法
+        - NVIDIA 自己实现的 [NCCL](https://github.com/NVIDIA/nccl) 通讯库 - Optimized primitives for inter-GPU communication
+            - [如何理解 Nvidia 英伟达的 Multi-GPU 多卡通信框架 NCCL？](https://www.zhihu.com/question/63219175)
+    - 卡的调度（基于k8s）
+- 部署
+    - [TorchServe](https://github.com/pytorch/serve)
+    - C++ 部署
+- 源码阅读
+    - torch
+    - csrc
+    - aten
+    - c10
+- case
+    - 机器视觉 CV
+        - 图像分类 Image Classification
+            - LeNet
+            - AlexNet
+            - VGG
+            - InceptionNet/GoogleNet
+            - ResNet
+        - 目标检测 Object Detection
+            - R-CNN
+            - SSD
+            - YOLO
+        - 图像分割 Image Segmentation / 语义分割 Semantic Segmentation
+            - FCN
+            - U-Net
+        - 图像生成 Image Generation
+            - GAN
+        - 样式迁移 Style Transfer
+    - 自然语言处理 NLP
+        - word2vec
+        - LSTM
+        - Seq2Seq
+        - BERT
+        - 语音
+            - Transformer
+    - GPT-2
+    - 视觉任务（ImageNet 上的 VGG16）
+    - NLP 任务（SQuAD 上的 BERT-Large 微调）
+    - 语音任务（AISHELL-2 上的 Transformer）
+
+    ```
+    $ !nvidia-smi
+    ```
