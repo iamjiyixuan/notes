@@ -40,6 +40,9 @@
 - [《深入浅出 Webpack》](https://github.com/gwuhaolin/dive-into-webpack)
 - [《狼叔：如何正确的学习 Node.js》](https://github.com/i5ting/How-to-learn-node-correctly)
 
+## .Net
+- [Rector](https://www.zhihu.com/people/rector1024/posts)
+
 ## 移动端
 - 微信移动客户端开发团队 WeMobileDev 公众号
 ### iOS
@@ -70,6 +73,3 @@
 - [蚂蚁金服 Ant Design](https://zhuanlan.zhihu.com/antdesign)
 - [饿了么 UED](https://zhuanlan.zhihu.com/elemeued)
 - [MartinRGB](http://www.martinrgb.com)
-
-## 生活
-- [杭州房产知识扫盲](https://github.com/houshanren/hangzhou_house_knowledge)
