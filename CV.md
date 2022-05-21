@@ -1,4 +1,11 @@
-# 计算机视觉
+# 计算机视觉 Computer Vision
+
+## 前置课程
+- [《数字图像处理 · 第四版（DIP4E）》](https://book.douban.com/subject/35075811/)
+- [《动手学深度学习》](https://zh.d2l.ai/index.html)
+
+## 后置课程
+- [《机器学习系统：设计和实现》](https://openmlsys.github.io/)
 
 ## 相关顶会
 - CVPR, Internaltional Conference on Computer Vision and Pattern Recogintion
@@ -9,8 +16,11 @@
 ## 细分领域
 - 图像分类 Image Classification
 - 目标检测 Object Detection
+    - One-stage：
+    - Two-stage：先提出区域（region proposal），然后对这些区域进行分类和位置修正预测
 - 目标跟踪 Object Tracking
 - 语义分割 Semantic Segmentation
+- 样式迁移 Style Transfer
 - 图像超分辨率 Image Super-Resolution
 
 ## 硬件
@@ -20,29 +30,53 @@
 - 激光雷达 LiDAR
 
 ## 数据集
+- MNIST、Fashion-MNIST
 - https://www.payititi.com/
 - https://aistudio.baidu.com/aistudio/datasetoverview
 
+## 编程语言
+- Python
+- C++
+
 ## 开源项目
+- https://opencv.org/
 - [OpenMMLab](https://github.com/open-mmlab)
 - https://paperswithcode.com/
+
+## 图像处理
+- 
+
+## 网络结构
+- backbone：主干网络，CV 中用于特征提取，常见的有 VGG、ResNet、MobileNet 等
 
 ## 论文精读 & 复现
 
 <table>
+    <tr>
+        <td>LeNet 1989</td>
+    </tr>
     <tr>
         <td>
             <a href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">AlexNet</a> 2012 
         </td>
         <td>classification</td>
         <td>
-            卷积神经网络在大规模数据集的开篇巨作<br /><br />
+            卷积神经网络（Convolutional Neural Network, CNN）在大规模数据集的开篇巨作。网络结构：5 卷积 + 3 全连接<br /><br />
             <a href="https://www.bilibili.com/video/BV1ih411J7Kz/">【B站】9年后重读深度学习奠基作之一：AlexNet【论文精读】by 李沐</a><br />
             <a href="https://www.bilibili.com/video/BV1hq4y157t1/">【B站】AlexNet 论文逐段精读【论文精读】by 李沐</a>
         </td>
     </tr>
     <tr>
+        <td>VGG 2014</td>
+    </tr>
+    <tr>
         <td>ResNet 2015</td>
+        <td>classification</td>
+        <td>
+            残差网络 <br /><br />
+            <a href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a> <br />
+            <a href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a>
+        </td>
     </tr>
     <tr>
         <td>
@@ -53,6 +87,30 @@
         </td>
         <td>detection</td>
         <td></td>
+    </tr>
+    <tr>
+        <td>YOLO</td>
+        <td>detection</td>
+    </tr>
+    <tr>
+        <td>SSD 2015</td>
+        <td>detection</td>
+        <td>Single Shot MultiBox Detector</td>
+    </tr>
+    <tr>
+        <td>FCN 2014</td>
+        <td>segmentation</td>
+        <td>Fully Convolutional Networks</td>
+    </tr>
+    <tr>
+        <td>
+            U-Net 2015
+        </td>
+        <td>segmentation</td>
+    </tr>
+    <tr>
+        <td>MobileNet</td>
+        <td>轻量级主干网络</td>
     </tr>
     <tr>
         <td>
@@ -88,7 +146,7 @@
         </td>
     </tr>
     <tr>
-        <td>More...</td>
+        <td>更多。。。</td>
         <td></td>
         <td>
             <a href="https://github.com/mli/paper-reading">https://github.com/mli/paper-reading</a>
