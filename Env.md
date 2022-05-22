@@ -223,7 +223,7 @@ $ conda activate hello-torch-cuda
 $ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 
-如果是老显卡（例如 NVIDIA Quadro K420），cuda 只有 10.1 版本，则不能安装最新版 PyTorch，需从历史版本中寻找适配的 PyTorch 版本
+如果是老显卡（例如 NVIDIA Quadro K420），cuda 最高只有安装 10.1 版本，则不能安装最新版 PyTorch，需从历史版本中寻找适配的 PyTorch 版本
 ```
 $ conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
 ```
