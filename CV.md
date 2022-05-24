@@ -33,6 +33,7 @@
 - MNIST、Fashion-MNIST
 - https://www.payititi.com/
 - https://aistudio.baidu.com/aistudio/datasetoverview
+- https://www.kaggle.com/datasets
 
 ## 编程语言
 - Python
@@ -61,7 +62,8 @@
         </td>
         <td>classification</td>
         <td>
-            卷积神经网络（Convolutional Neural Network, CNN）在大规模数据集的开篇巨作。网络结构：5 卷积 + 3 全连接<br /><br />
+            卷积神经网络（Convolutional Neural Network, CNN）在大规模数据集的开篇巨作。网络结构：5 卷积 + 3 全连接<br />
+            <br />
             <a href="https://www.bilibili.com/video/BV1ih411J7Kz/">【B站】9年后重读深度学习奠基作之一：AlexNet【论文精读】by 李沐</a><br />
             <a href="https://www.bilibili.com/video/BV1hq4y157t1/">【B站】AlexNet 论文逐段精读【论文精读】by 李沐</a>
         </td>
@@ -73,7 +75,8 @@
         <td>ResNet 2015</td>
         <td>classification</td>
         <td>
-            残差网络 <br /><br />
+            残差网络 <br />
+            <br />
             <a href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a> <br />
             <a href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a>
         </td>
@@ -89,8 +92,62 @@
         <td></td>
     </tr>
     <tr>
-        <td>YOLO</td>
+        <td>YOLO-v1 2016</td>
         <td>detection</td>
+        <td>
+            You Only Look Once: Unified, Real-Time Object Detection <a href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
+            <br />
+            官网：<a href="https://pjreddie.com/">https://pjreddie.com/</a><br />
+            <br />
+            <a href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a>
+        </td>
+    </tr>
+    <tr>
+        <td>YOLO-v2 2017</td>
+        <td>detection</td>
+        <td>
+            YOLO9000: Better, Faster, Stronger <br />
+        </td>
+    </tr>
+    <tr>
+        <td>YOLO-v3 2018</td>
+        <td>detection</td>
+        <td>
+            YOLOv3: An Incremental Improvement <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
+            <br />
+            <a href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
+            <a href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a>
+        </td>
+    </tr>
+    <tr>
+        <td>YOLO-v4 2020</td>
+        <td>detection</td>
+        <td>
+            YOLOv4: Optimal Speed and Accuracy of Object Detection <br />
+            <br />
+            <a href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a>
+        </td>
+    </tr>
+    <tr>
+        <td>YOLO-v5 2020</td>
+        <td>detection</td>
+        <td>
+            <a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
+        </td>
+    </tr>
+    <tr>
+        <td>YOLOF 2021</td>
+        <td>detection</td>
+        <td>
+            YOLOF: You Only Look One-level Feature <br />
+        </td>
+    </tr>
+    <tr>
+        <td>YOLOX 2021</td>
+        <td>detection</td>
+        <td>
+            YOLOX: Exceeding YOLO Series in 2021 <br />
+        </td>
     </tr>
     <tr>
         <td>SSD 2015</td>
