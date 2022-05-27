@@ -34,6 +34,9 @@
 - https://www.payititi.com/
 - https://aistudio.baidu.com/aistudio/datasetoverview
 - https://www.kaggle.com/datasets
+- 目标检测
+    - COCO https://cocodataset.org/#home
+    - VOC http://host.robots.ox.ac.uk/pascal/VOC/ 有 VOC2007 和 VOC2012 两个数据集。包含约 10,000 张带有边界框的图片用于训练和验证，含有 20 个类别
 
 ## 编程语言
 - Python

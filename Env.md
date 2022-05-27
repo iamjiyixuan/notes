@@ -223,17 +223,17 @@ $ conda activate hello-torch-cuda
 $ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 
-如果是老显卡（例如 NVIDIA Quadro K420），cuda 最高只有安装 10.1 版本，则不能安装最新版 PyTorch，需从历史版本中寻找适配的 PyTorch 版本
-```
-$ conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
-```
+老显卡（例如 NVIDIA Quadro K420）因为算力不够会报 `PyTorch no longer supports this GPU because it is too old.` 需要自己编译 PyTorch [Building PyTorch from source on Windows to work with an old GPU](https://datagraphi.com/blog/post/2021/9/13/building-pytorch-from-source-on-windows-to-work-with-an-old-gpu)
+
+显卡算力查询：https://developer.nvidia.com/cuda-gpus
 
 检查 torch 和 cuda 环境
 ```console
-$ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
+$ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.tensor([1, 2, 3]).cuda());"
 
 1.10.2
 True
+tensor([1, 2, 3], device='cuda:0')
 ```
 
 ## macOS
