@@ -223,7 +223,7 @@ $ conda activate hello-torch-cuda
 $ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 ```
 
-老显卡（例如 NVIDIA Quadro K420）因为算力不够会报 `PyTorch no longer supports this GPU because it is too old.` 需要自己编译 PyTorch [Building PyTorch from source on Windows to work with an old GPU](https://datagraphi.com/blog/post/2021/9/13/building-pytorch-from-source-on-windows-to-work-with-an-old-gpu)
+老显卡（例如 NVIDIA Quadro K420）因为算力不够会报 `PyTorch no longer supports this GPU because it is too old.` 可以尝试自己编译 PyTorch [Building PyTorch from source on Windows to work with an old GPU](https://datagraphi.com/blog/post/2021/9/13/building-pytorch-from-source-on-windows-to-work-with-an-old-gpu)
 
 显卡算力查询：https://developer.nvidia.com/cuda-gpus
 
@@ -237,6 +237,9 @@ tensor([1, 2, 3], device='cuda:0')
 ```
 
 ## macOS
+
+## 其他工具
+- [快贴](https://home.clipber.com/)
 
 ## 参考
 - [【知乎】填坑向：Win 11 + RTX3060 的深度学习环境配置](https://zhuanlan.zhihu.com/p/432831828)

@@ -31,6 +31,9 @@
 
 ## 数据集
 - MNIST、Fashion-MNIST
+    - MNIST 包括 6 万张 28x28 的训练样本，1 万张测试样本
+- [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html)
+    - CIFAR-10 数据集由 10 个类的 60000 个 32x32 彩色图像组成，每个类有 6000 个图像，共 50000 个训练图像和 10000 个测试图像。
 - https://www.payititi.com/
 - https://aistudio.baidu.com/aistudio/datasetoverview
 - https://www.kaggle.com/datasets
@@ -52,6 +55,12 @@
 
 ## 网络结构
 - backbone：主干网络，CV 中用于特征提取，常见的有 VGG、ResNet、MobileNet 等
+
+## Benchmark
+- [Deep Learning GPU Benchmarks 2021](https://www.aime.info/blog/deep-learning-gpu-benchmarks-2021/)
+- Apple M1 GPU
+    - [【B站】PyTorch 支持 M1 GPU 加速了! 提升有多大?](https://www.bilibili.com/video/BV1a341137Sb/?spm_id_from=333.788)
+    - [Running PyTorch on the M1 GPU](https://sebastianraschka.com/blog/2022/pytorch-m1-gpu.html)
 
 ## 论文精读 & 复现
 
