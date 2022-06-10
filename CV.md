@@ -1,7 +1,7 @@
 # 计算机视觉 Computer Vision
 
 ## 前置课程
-- [《数字图像处理 · 第四版（DIP4E）》](https://book.douban.com/subject/35075811/)
+- [《数字图像处理 · 第四版》](https://book.douban.com/subject/35075811/)
 - [《动手学深度学习》](https://zh.d2l.ai/index.html)
 
 ## 后置课程
@@ -12,6 +12,9 @@
 - ICCV, IEEE International Conference on Computer Vision
 - ECCV, Europeon Conference on Computer Vision
 - NeurIPS, Conference and Workshop on Neural Information Processing Systems
+- AAAI, 
+
+[最新！AI顶会排行榜揭晓， CVPR居首 NIPS、ICML分列二、三位](https://zhuanlan.zhihu.com/p/82288889)
 
 ## 细分领域
 - 图像分类 Image Classification
@@ -69,28 +72,55 @@
         <td>LeNet 1989</td>
     </tr>
     <tr>
-        <td>
-            <a href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">AlexNet</a> 2012 
-        </td>
+        <td>AlexNet</td>
         <td>classification</td>
         <td>
-            卷积神经网络（Convolutional Neural Network, CNN）在大规模数据集的开篇巨作。网络结构：5 卷积 + 3 全连接<br />
+            NIPS-2012, ImageNet Classification with Deep Convolutional Neural Networks <a target="_blank" href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">pdf</a><br />
+            深度卷积神经网络在大规模数据集的开篇巨作<br />
+            <a target="_blank" href="https://www.bilibili.com/video/BV1ih411J7Kz/">【B站】9年后重读深度学习奠基作之一：AlexNet【论文精读】by 李沐</a><br />
+            <a target="_blank" href="https://www.bilibili.com/video/BV1hq4y157t1/">【B站】AlexNet 论文逐段精读【论文精读】by 李沐</a>
+        </td>
+    </tr>
+    <tr>
+        <td>GoogLeNet</td>
+        <td>classification & detection</td>
+        <td>
+            CVPR-2015, Going deeper with convolutions <a target="_blank" href="https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf">pdf</a><br />
+            提出多尺度卷积模块<br />
             <br />
-            <a href="https://www.bilibili.com/video/BV1ih411J7Kz/">【B站】9年后重读深度学习奠基作之一：AlexNet【论文精读】by 李沐</a><br />
-            <a href="https://www.bilibili.com/video/BV1hq4y157t1/">【B站】AlexNet 论文逐段精读【论文精读】by 李沐</a>
+            arXiv-2015, Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift <a target="_blank" href="http://data-science.wiki/images/Batch_Normalization-_Accelerating_Deep_Network_Training_by_Reducing_Internal_Covariate_Shift_1502.03167v3.pdf">pdf</a><br />
+            提出 BN 层<br />
+            <br />
+            CVPR-2016, Rethinking the Inception Architecture for Computer Vision <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf">pdf</a><br />
+            提出卷积分解<br />
+            <br />
+            AAAI-2017, Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning <a target="_blank" href="https://www.cs.cmu.edu/~jeanoh/16-785/papers/szegedy-aaai2017-inception-v4.pdf">pdf</a><br />
         </td>
     </tr>
     <tr>
-        <td>VGG 2014</td>
+        <td>VGGNet</td>
+        <td></td>
+        <td>
+            ICLR-2015, Very Deep Convolutional Networks for Large-Scale Image Recognition
+        </td>
     </tr>
     <tr>
-        <td>ResNet 2015</td>
+        <td>ResNet</td>
         <td>classification</td>
         <td>
+            CVPR-2016, Deep Residual Learning for Image Recognition <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">pdf</a><br />
             残差网络 <br />
+            <a target="_blank" href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a><br />
+            <a target="_blank" href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a><br />
             <br />
-            <a href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a> <br />
-            <a href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a>
+            ResNeXt：CVPR-2017, Aggregated Residual Transformations for Deep Neural Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Xie_Aggregated_Residual_Transformations_CVPR_2017_paper.pdf">pdf</a>
+        </td>
+    </tr>
+    <tr>
+        <td>DenseNet</td>
+        <td></td>
+        <td>
+            CVPR-2017, Densely Connected Convolutional Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf">pdf</a>
         </td>
     </tr>
     <tr>
@@ -107,11 +137,11 @@
         <td>YOLO-v1 2016</td>
         <td>detection</td>
         <td>
-            You Only Look Once: Unified, Real-Time Object Detection <a href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
+            You Only Look Once: Unified, Real-Time Object Detection <a target="_blank" href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
             <br />
-            官网：<a href="https://pjreddie.com/">https://pjreddie.com/</a><br />
+            官网：<a target="_blank" href="https://pjreddie.com/">https://pjreddie.com/</a><br />
             <br />
-            <a href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a>
+            <a target="_blank" href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a>
         </td>
     </tr>
     <tr>
@@ -125,10 +155,10 @@
         <td>YOLO-v3 2018</td>
         <td>detection</td>
         <td>
-            YOLOv3: An Incremental Improvement <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
+            YOLOv3: An Incremental Improvement <a target="_blank" href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
             <br />
-            <a href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
-            <a href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a>
+            <a target="_blank" href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
+            <a target="_blank" href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a>
         </td>
     </tr>
     <tr>
@@ -137,14 +167,14 @@
         <td>
             YOLOv4: Optimal Speed and Accuracy of Object Detection <br />
             <br />
-            <a href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a>
+            <a target="_blank" href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a>
         </td>
     </tr>
     <tr>
         <td>YOLO-v5 2020</td>
         <td>detection</td>
         <td>
-            <a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
+            <a target="_blank" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
         </td>
     </tr>
     <tr>
@@ -183,18 +213,18 @@
     </tr>
     <tr>
         <td>
-            <a href="https://arxiv.org/abs/1708.02002">RetinaNet</a> 2017
+            <a target="_blank" href="https://arxiv.org/abs/1708.02002">RetinaNet</a> 2017
         </td>
         <td>detection</td>
         <td>
-            <a href="https://zhuanlan.zhihu.com/p/346198300">【知乎】轻松掌握 MMDetection 中常用算法(一)：RetinaNet 及配置详解</a>
+            <a target="_blank" href="https://zhuanlan.zhihu.com/p/346198300">【知乎】轻松掌握 MMDetection 中常用算法(一)：RetinaNet 及配置详解</a>
         </td>
     </tr>
     <tr>
         <td>PointRCNN 2019</td>
         <td>3D detection</td>
         <td>
-            <a href="https://www.bilibili.com/video/BV1cE411L7mL?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】PointRCNN & Part-A2 Net</a>
+            <a target="_blank" href="https://www.bilibili.com/video/BV1cE411L7mL?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】PointRCNN & Part-A2 Net</a>
         </td>
     </tr>
     <tr>
@@ -218,7 +248,7 @@
         <td>更多。。。</td>
         <td></td>
         <td>
-            <a href="https://github.com/mli/paper-reading">https://github.com/mli/paper-reading</a>
+            <a target="_blank" href="https://github.com/mli/paper-reading">https://github.com/mli/paper-reading</a>
         </td>
     </tr>
 </table>
