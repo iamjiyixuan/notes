@@ -167,6 +167,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ```
 
+[在 WIN10 PowerShell 中使用并激活 Anaconda 虚拟环境](https://zhuanlan.zhihu.com/p/149656019) 注意，在此之前要将 `D:\Software\Anaconda3`、`D:\Software\Anaconda3\Scripts`、`D:\Software\Anaconda3\Library\bin` 添加到系统环境变量的 PATH 中。（D:\Software\Anaconda3 为 Anaconda3 的安装目录，根据实际情况替换）
+
 ### GPU 版本 PyTorch 环境
 
 英伟达官网下载安装最新的显卡驱动，然后检查 GPU 环境。注意 `nvidia-smi` 随显卡驱动安装 [Different CUDA versions shown by nvcc and NVIDIA-smi?](https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi)
@@ -200,6 +202,8 @@ Mon Feb 28 16:08:31 2022
 如果 nvidia-smi 报不是外部命令，先将 `C:\Program Files\NVIDIA Corporation\NVSMI` 添加到系统环境变量 PATH 中
 
 如果 nvidia-smi 没有显示 cuda version 信息，只是驱动版本过低（需要高于 410.72）。https://forums.developer.nvidia.com/t/nvidia-smi-doesnt-show-cuda-version-even-after-installation/68738
+
+（可选）GPU 进程监控开源工具 https://github.com/XuehaiPan/nvitop
 
 安装 CUDA Toolkit https://developer.nvidia.com/cuda-toolkit-archive
 ```
