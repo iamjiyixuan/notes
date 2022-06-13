@@ -167,6 +167,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ```
 
+设置环境变量 `TORCH_HOME`，否则预训练模型会下载到 `C:\Users\<username>\.cache\torch` 下，占用你的 C 盘空间。https://pytorch.org/docs/stable/hub.html#where-are-my-downloaded-models-saved
+
 ### GPU 版本 PyTorch 环境
 
 英伟达官网下载安装最新的显卡驱动，然后检查 GPU 环境。注意 `nvidia-smi` 随显卡驱动安装 [Different CUDA versions shown by nvcc and NVIDIA-smi?](https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi)
