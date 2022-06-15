@@ -87,6 +87,7 @@
         <td>
             CVPR-2015, Going deeper with convolutions <a target="_blank" href="https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf">pdf</a><br />
             提出多尺度卷积模块<br />
+            ----------------------------------------------------<br />
             <hr />
             arXiv-2015, Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift <a target="_blank" href="http://data-science.wiki/images/Batch_Normalization-_Accelerating_Deep_Network_Training_by_Reducing_Internal_Covariate_Shift_1502.03167v3.pdf">pdf</a><br />
             提出 BN 层<br />
