@@ -83,25 +83,29 @@
     </tr>
     <tr>
         <td>GoogLeNet</td>
-        <td>classification & detection</td>
+        <td>classification</td>
         <td>
             CVPR-2015, Going deeper with convolutions <a target="_blank" href="https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf">pdf</a><br />
             提出多尺度卷积模块<br />
-            <br />
+            <hr />
             arXiv-2015, Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift <a target="_blank" href="http://data-science.wiki/images/Batch_Normalization-_Accelerating_Deep_Network_Training_by_Reducing_Internal_Covariate_Shift_1502.03167v3.pdf">pdf</a><br />
             提出 BN 层<br />
-            <br />
+            <hr />
             CVPR-2016, Rethinking the Inception Architecture for Computer Vision <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf">pdf</a><br />
             提出卷积分解<br />
-            <br />
+            <hr />
             AAAI-2017, Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning <a target="_blank" href="https://www.cs.cmu.edu/~jeanoh/16-785/papers/szegedy-aaai2017-inception-v4.pdf">pdf</a><br />
         </td>
     </tr>
     <tr>
         <td>VGGNet</td>
-        <td></td>
+        <td>classification</td>
         <td>
-            ICLR-2015, Very Deep Convolutional Networks for Large-Scale Image Recognition
+            ICLR-2015, Very Deep Convolutional Networks for Large-Scale Image Recognition <a href="https://arxiv.org/pdf/1409.1556.pdf">pdf</a><br />
+            <br />
+            VGGNet 可以看成是加深版的 AlexNet，5 个卷积 stage、3 层全连接层、softmax 层，层与层之间使用 max-pooling，激活函数均为 ReLU。常见结构 VGG16 和 VGG19，两者并没有本质上的区别，只是网络深度不一样。VGG16 包含了 16 个隐藏层（13 个卷积层和 3 个全连接层），而 VGG19 包含了 19 个隐藏层（16 个卷积层和 3 个全连接层）<br />
+            <br />
+            预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/vgg">https://github.com/open-mmlab/mmclassification/tree/master/configs/vgg</a><br />
         </td>
     </tr>
     <tr>
@@ -109,10 +113,11 @@
         <td>classification</td>
         <td>
             CVPR-2016, Deep Residual Learning for Image Recognition <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">pdf</a><br />
-            残差网络 <br />
+            <br />
+            预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/resnet">https://github.com/open-mmlab/mmclassification/tree/master/configs/resnet</a><br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a><br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a><br />
-            <br />
+            <hr />
             ResNeXt：CVPR-2017, Aggregated Residual Transformations for Deep Neural Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Xie_Aggregated_Residual_Transformations_CVPR_2017_paper.pdf">pdf</a>
         </td>
     </tr>
@@ -134,67 +139,38 @@
         <td></td>
     </tr>
     <tr>
-        <td>YOLO-v1 2016</td>
-        <td>detection</td>
+        <td>SSD</td>
+        <td>detection（one-stage）</td>
         <td>
-            You Only Look Once: Unified, Real-Time Object Detection <a target="_blank" href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
-            <br />
-            官网：<a target="_blank" href="https://pjreddie.com/">https://pjreddie.com/</a><br />
-            <br />
-            <a target="_blank" href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a>
+            ECCV 2016, Single Shot MultiBox Detector <a href="https://www.cs.unc.edu/~wliu/papers/ssd.pdf">pdf</a><br />
+            <a href="https://zhuanlan.zhihu.com/p/31427288">【知乎】SSD 目标检测</a><br />
+            <a href="https://www.yuque.com/docs/share/5da9151c-14ee-4473-8975-28f9badd9197">【语雀】【目标检测实战】Pytorch—SSD 模型训练（VOC 数据集）</a>
         </td>
     </tr>
     <tr>
-        <td>YOLO-v2 2017</td>
-        <td>detection</td>
+        <td>YOLO</td>
+        <td>detection（one-stage）</td>
         <td>
-            YOLO9000: Better, Faster, Stronger <br />
-        </td>
-    </tr>
-    <tr>
-        <td>YOLO-v3 2018</td>
-        <td>detection</td>
-        <td>
-            YOLOv3: An Incremental Improvement <a target="_blank" href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
+            YOLO 官网：<a target="_blank" href="https://pjreddie.com/">https://pjreddie.com/</a><br />
+            <a target="_blank" href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a><br />
             <br />
+            CVPR-2016, You Only Look Once: Unified, Real-Time Object Detection <a target="_blank" href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
+            <br />
+            CVPR-2017, YOLO9000: Better, Faster, Stronger <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf">pdf</a><br />
+            <br />
+            arXiv-2018, YOLOv3: An Incremental Improvement <a target="_blank" href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
             <a target="_blank" href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
-            <a target="_blank" href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a>
-        </td>
-    </tr>
-    <tr>
-        <td>YOLO-v4 2020</td>
-        <td>detection</td>
-        <td>
-            YOLOv4: Optimal Speed and Accuracy of Object Detection <br />
+            <a target="_blank" href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a><br />
             <br />
-            <a target="_blank" href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a>
+            arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection <a href="">pdf</a><br />
+            <a target="_blank" href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a><br />
+            <br />
+            YOLO-v5（非官方承认）：<a target="_blank" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
+            <br />
+            YOLOF：CVPR-2021, You Only Look One-level Feature <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_You_Only_Look_One-Level_Feature_CVPR_2021_paper.pdf">pdf</a><br />
+            <br />
+            YOLOX: arXiv-2021, Exceeding YOLO Series in 2021 <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a><br />
         </td>
-    </tr>
-    <tr>
-        <td>YOLO-v5 2020</td>
-        <td>detection</td>
-        <td>
-            <a target="_blank" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
-        </td>
-    </tr>
-    <tr>
-        <td>YOLOF 2021</td>
-        <td>detection</td>
-        <td>
-            YOLOF: You Only Look One-level Feature <br />
-        </td>
-    </tr>
-    <tr>
-        <td>YOLOX 2021</td>
-        <td>detection</td>
-        <td>
-            YOLOX: Exceeding YOLO Series in 2021 <br />
-        </td>
-    </tr>
-    <tr>
-        <td>SSD 2015</td>
-        <td>detection</td>
-        <td>Single Shot MultiBox Detector</td>
     </tr>
     <tr>
         <td>FCN 2014</td>
@@ -248,7 +224,8 @@
         <td>更多。。。</td>
         <td></td>
         <td>
-            <a target="_blank" href="https://github.com/mli/paper-reading">https://github.com/mli/paper-reading</a>
+            <a target="_blank" href="https://github.com/mli/paper-reading">https://github.com/mli/paper-reading</a> <br />
+            <a href="https://github.com/amusi/CVPR2022-Papers-with-Code">https://github.com/amusi/CVPR2022-Papers-with-Code</a>
         </td>
     </tr>
 </table>
