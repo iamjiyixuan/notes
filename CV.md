@@ -37,12 +37,14 @@
     - MNIST 包括 6 万张 28x28 的训练样本，1 万张测试样本
 - [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html)
     - CIFAR-10 数据集由 10 个类的 60000 个 32x32 彩色图像组成，每个类有 6000 个图像，共 50000 个训练图像和 10000 个测试图像。
+- [ImageNet](https://www.image-net.org/)
+    - [【知乎】ImageNet 这八年：李飞飞和她改变的 AI 世界](https://zhuanlan.zhihu.com/p/28142670 )
 - https://www.payititi.com/
 - https://aistudio.baidu.com/aistudio/datasetoverview
 - https://www.kaggle.com/datasets
 - 目标检测
     - COCO https://cocodataset.org/#home
-    - VOC http://host.robots.ox.ac.uk/pascal/VOC/ 有 VOC2007 和 VOC2012 两个数据集。包含约 10,000 张带有边界框的图片用于训练和验证，含有 20 个类别
+    - VOC http://host.robots.ox.ac.uk/pascal/VOC 有 VOC2007 和 VOC2012 两个数据集。包含约 10,000 张带有边界框的图片用于训练和验证，含有 20 个类别
 
 ## 编程语言
 - Python
@@ -66,9 +68,6 @@
     - [Running PyTorch on the M1 GPU](https://sebastianraschka.com/blog/2022/pytorch-m1-gpu.html)
 
 ## 论文精读 & 复现
-
-----
-
 <table>
     <tr>
         <td>LeNet 1989</td>
@@ -78,7 +77,9 @@
         <td>classification</td>
         <td>
             NIPS-2012, ImageNet Classification with Deep Convolutional Neural Networks <a target="_blank" href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">pdf</a><br />
+            <br />
             深度卷积神经网络在大规模数据集的开篇巨作<br />
+            <br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1ih411J7Kz/">【B站】9年后重读深度学习奠基作之一：AlexNet【论文精读】by 李沐</a><br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1hq4y157t1/">【B站】AlexNet 论文逐段精读【论文精读】by 李沐</a>
         </td>
@@ -89,7 +90,6 @@
         <td>
             CVPR-2015, Going deeper with convolutions <a target="_blank" href="https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf">pdf</a><br />
             提出多尺度卷积模块<br />
-            ----------------------------------------------------<br />
             <hr />
             arXiv-2015, Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift <a target="_blank" href="http://data-science.wiki/images/Batch_Normalization-_Accelerating_Deep_Network_Training_by_Reducing_Internal_Covariate_Shift_1502.03167v3.pdf">pdf</a><br />
             提出 BN 层<br />
@@ -121,14 +121,44 @@
             <a target="_blank" href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a><br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a><br />
             <hr />
-            ResNeXt：CVPR-2017, Aggregated Residual Transformations for Deep Neural Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Xie_Aggregated_Residual_Transformations_CVPR_2017_paper.pdf">pdf</a>
+            ResNeXt：CVPR-2017, Aggregated Residual Transformations for Deep Neural Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Xie_Aggregated_Residual_Transformations_CVPR_2017_paper.pdf">pdf</a><br />
+            <br />
+            预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/resnext">https://github.com/open-mmlab/mmclassification/tree/master/configs/resnext</a>
         </td>
     </tr>
     <tr>
         <td>DenseNet</td>
-        <td></td>
+        <td>classification</td>
         <td>
-            CVPR-2017, Densely Connected Convolutional Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf">pdf</a>
+            CVPR-2017, Densely Connected Convolutional Networks <a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf">pdf</a><br />
+            <a href="https://zhuanlan.zhihu.com/p/37189203">【知乎】DenseNet：比 ResNet 更优的 CNN 模型</a>
+        </td>
+    </tr>
+    <tr>
+        <td>MobileNet</td>
+        <td>轻量级网络</td>
+        <td>
+            arXiv-2017, MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications <br />
+            <br />
+            <a href="https://zhuanlan.zhihu.com/p/70703846">【知乎】轻量级神经网络“巡礼”（二）—— MobileNet，从V1到V3</a><br />
+            <hr />
+            CVPR-2018, MobileNetV2: Inverted Residuals and Linear Bottlenecks <br />
+            <hr />
+            ICCV-2019, Searching for MobileNetV3 <br />
+        </td>
+    </tr>
+    <tr>
+        <td>ShuffleNet</td>
+        <td>轻量级网络</td>
+        <td>
+            CVPR-2018, ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_ShuffleNet_An_Extremely_CVPR_2018_paper.pdf">pdf</a><br />
+            <br />
+            预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v1">https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v1</a><br />
+            <hr />
+            ECCV-2018, Shufflenet v2: Practical guidelines for efficient cnn architecture design <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Ningning_Light-weight_CNN_Architecture_ECCV_2018_paper.pdf">pdf</a><br />
+            <br />
+            <a href="https://zhuanlan.zhihu.com/p/67009992">【知乎】轻量级神经网络“巡礼”（一）—— ShuffleNetV2</a><br />
+            预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v2">https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v2</a>
         </td>
     </tr>
     <tr>
@@ -156,23 +186,23 @@
         <td>
             YOLO 官网：<a target="_blank" href="https://pjreddie.com/">https://pjreddie.com/</a><br />
             <a target="_blank" href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a><br />
-            <br />
+            <hr />
             CVPR-2016, You Only Look Once: Unified, Real-Time Object Detection <a target="_blank" href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
-            <br />
+            <hr />
             CVPR-2017, YOLO9000: Better, Faster, Stronger <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf">pdf</a><br />
-            <br />
+            <hr />
             arXiv-2018, YOLOv3: An Incremental Improvement <a target="_blank" href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
             <a target="_blank" href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a><br />
-            <br />
+            <hr />
             arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection <a href="">pdf</a><br />
             <a target="_blank" href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a><br />
-            <br />
+            <hr />
             YOLO-v5（非官方承认）：<a target="_blank" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
-            <br />
+            <hr />
             YOLOF：CVPR-2021, You Only Look One-level Feature <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_You_Only_Look_One-Level_Feature_CVPR_2021_paper.pdf">pdf</a><br />
-            <br />
-            YOLOX: arXiv-2021, Exceeding YOLO Series in 2021 <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a><br />
+            <hr />
+            YOLOX：arXiv-2021, Exceeding YOLO Series in 2021 <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a><br />
         </td>
     </tr>
     <tr>
@@ -185,10 +215,6 @@
             U-Net 2015
         </td>
         <td>segmentation</td>
-    </tr>
-    <tr>
-        <td>MobileNet</td>
-        <td>轻量级主干网络</td>
     </tr>
     <tr>
         <td>
