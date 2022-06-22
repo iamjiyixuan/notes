@@ -205,17 +205,48 @@ tensor([1, 2, 3], device='cuda:0')
 
 ## WSL2
 
+https://zhuanlan.zhihu.com/p/356397851
+
+https://blog.csdn.net/ttwlqqj/article/details/106981684
+
 微软商店安装 Ubuntu 20.04.4 LTS
 
 > **Note**
 > 
 > 如果报错 `WslRegisterDistribution failed with error: 0x8007019e`，PowerShell 管理员权限下执行 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 
+检查当前 wsl 版本：
+```
+ $ wsl -l -v
+  NAME            STATE           VERSION
+* Ubuntu-20.04    Running         1
+```
 
-[如何在 Windows 10 上安装 WSL 2](https://zhuanlan.zhihu.com/p/337104547)
+当前 wsl 版本为 1，需要升级到 2。WSL2 需要启动虚拟机功能，PowerShell 管理员权限下执行：
+```
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
-打开 Hyper-V
-  - [HP 工作站 - 如何在 BIOS 下开启或关闭虚拟化技术](https://support.hp.com/cn-zh/document/c05189714)
+重启系统，检查一下虚拟机是否已启动：
+- 控制面版 --> 卸载程序 --> 启用或关闭 Windows 功能，确认 `Hyper-V`、 `适用于 Linux 的 Windows 子系统`、`虚拟机平台` 这三项已经勾上
+- 任务管理器中 --> 性能 --> 确认 CPU 中的虚拟化已开启
+
+> **Note**
+> 
+> 如果上述选项无法勾选，则需要在 BIOS 中开启虚拟化。以 HP 工作站 Z240 为例：开机按 F10 进入 BIOS，Advanced --> System Optioins --> Early PEIe Delay 中 勾上 `VTx` 和 `VTd`
+
+将 WSL 升级到 2：
+```
+$ wsl --set-version Ubuntu-20.04 2
+
+正在进行转换，这可能需要几分钟时间...
+有关与 WSL 2 的主要区别的信息，请访问 https://aka.ms/wsl2
+转换完成。
+```
+
+> **Note**
+>
+> 如果报错 `WSL 2 需要更新其内核组件`，则下载安装 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 ## macOS 
 
