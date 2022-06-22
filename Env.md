@@ -25,45 +25,6 @@
 - [AgentNEO](https://agentneo.tech/)
 - [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 下载 Clash.for.Windows.Setup.x.y.z.exe 即可
 
-### Windows Subsystem for Linux (WSL)
-重置
-```
-Installing, this may take a few minutes...
-Please create a default UNIX user account. The username does not need to match your Windows username.
-For more information visit: https://aka.ms/wslusers
-Enter new UNIX username: jyx
-New password:
-Retype new password:
-passwd: password updated successfully
-Installation successful!
-To run a command as administrator (user "root"), use "sudo <command>".
-See "man sudo_root" for details.
-
-Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 4.4.0-22000-Microsoft x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Sat Mar  5 19:08:44 CST 2022
-
-  System load:    0.52      Processes:              7
-  Usage of /home: unknown   Users logged in:        0
-  Memory usage:   58%       IPv4 address for eth1:  172.19.208.1
-  Swap usage:     0%        IPv4 address for wifi0: 192.168.50.203
-
-1 update can be applied immediately.
-To see these additional updates run: apt list --upgradable
-
-
-The list of available updates is more than a week old.
-To check for new updates run: sudo apt update
-
-
-This message is shown once a day. To disable it please create the
-/home/jyx/.hushlogin file.
-```
-
 ### Shell 环境
 - XShell
 - Cygwin64 Terminal
@@ -242,7 +203,20 @@ True
 tensor([1, 2, 3], device='cuda:0')
 ```
 
-## macOS
+## WSL2
+
+微软商店安装 Ubuntu 20.04.4 LTS
+
+**Note**
+如果报错 `WslRegisterDistribution failed with error: 0x8007019e`，PowerShell 管理员权限下执行 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+
+
+[如何在 Windows 10 上安装 WSL 2](https://zhuanlan.zhihu.com/p/337104547)
+
+打开 Hyper-V
+  - [HP 工作站 - 如何在 BIOS 下开启或关闭虚拟化技术](https://support.hp.com/cn-zh/document/c05189714)
+
+## macOS 
 
 ## 其他工具
 - [快贴](https://home.clipber.com/)
