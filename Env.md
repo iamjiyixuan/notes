@@ -207,8 +207,8 @@ tensor([1, 2, 3], device='cuda:0')
 
 微软商店安装 Ubuntu 20.04.4 LTS
 
-**Note**
-如果报错 `WslRegisterDistribution failed with error: 0x8007019e`，PowerShell 管理员权限下执行 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+> **Note**
+> 如果报错 `WslRegisterDistribution failed with error: 0x8007019e`，PowerShell 管理员权限下执行 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 
 
 [如何在 Windows 10 上安装 WSL 2](https://zhuanlan.zhihu.com/p/337104547)
