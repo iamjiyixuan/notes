@@ -1,4 +1,4 @@
-# 我的工作环境（更新至 2022-05-22）
+# 我的工作环境
 
 ## 硬件
 - [MacBook Pro 2019](https://item.jd.com/100010079900.html)
@@ -7,10 +7,15 @@
   - 外接 [雷蛇（Razer）战核X 显卡拓展坞](https://item.jd.com/100005298502.html) + [技嘉 GIGABYTE GeForce RTX 2060](https://item.jd.com/100031182780.html)
 - [HP Z240 Small Form Factor Workstation 2016](https://support.hp.com/cn-zh/document/c04909569)
   - Intel Core™ i5-6500 3.20GHz 4核4线程 CPU
-  - NVIDIA Quadro K420 2 GB
+  - [金士顿（Kingston）FURY 16GB（8G×2）套装 DDR4](https://item.jd.com/100005116786.html)
+  - <del>NVIDIA Quadro K420 2 GB</del>
+  - [丽台（LEADTEK）NVIDIA T1000 8G](https://item.jd.com/100032514078.html)
+  - [丽台（LEADTEK）NVIDIA T1000 4G](https://item.jd.com/100012341167.html)
 - [华硕（ASUS）RT-AC86U 无线路由器](https://item.jd.com/5026604.html)
 - 配件
+  - [雷蛇（Razer）蝰蛇2000 游戏鼠标 黑色版](https://item.jd.com/3756787.html)
   - [京东京造 C1 有线机械键盘 87 键复古茶轴](https://item.jd.com/100017358781.html)
+  - [漫步者（EDIFIER）R1000BT 蓝牙音箱](https://item.jd.com/3202817.html)
 
 ## Windows
 
@@ -185,6 +190,10 @@ $ conda create --name hello-torch-cuda --yes
 $ conda activate hello-torch-cuda
 ```
 
+> **Note**
+>
+> 如果 `conda activate` 报错 `CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.`，尝试执行 `source activate`
+
 安装 cuda 版本 PyTorch
 ```
 $ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
@@ -205,9 +214,7 @@ tensor([1, 2, 3], device='cuda:0')
 
 ## WSL2
 
-https://zhuanlan.zhihu.com/p/356397851
-
-https://blog.csdn.net/ttwlqqj/article/details/106981684
+WSL：Windows Subsystem for Linux
 
 微软商店安装 Ubuntu 20.04.4 LTS
 
@@ -229,7 +236,7 @@ $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nor
 
 重启系统，检查一下虚拟机是否已启动：
 - 控制面版 --> 卸载程序 --> 启用或关闭 Windows 功能，确认 `Hyper-V`、 `适用于 Linux 的 Windows 子系统`、`虚拟机平台` 这三项已经勾上
-- 任务管理器中 --> 性能 --> 确认 CPU 中的虚拟化已开启
+- 任务管理器中 --> 性能 --> CPU，确认 `虚拟化` 已启用
 
 > **Note**
 > 
@@ -247,6 +254,122 @@ $ wsl --set-version Ubuntu-20.04 2
 > **Note**
 >
 > 如果报错 `WSL 2 需要更新其内核组件`，则下载安装 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+WSL2 的虚拟磁盘文件在 `C:\Users\{user}\AppData\Local\Packages\` 下面，不同的 WSL2 发行版对应的名称不同，例如 Pengwin 是 WhitewaterFoundryLtd.Co，Ubuntu 是 CanonicalGroupLimited，Debian 是 TheDebianProject。找到了你的 WSL2 的文件夹，就能在它下面找到 `LocalState\ext4.vhdx` 这个磁盘文件（初始 6.19G）。
+
+### Windows 与 WSL 的文件互访
+
+WSL 中访问 Windows 文件：
+```
+$ cd /mnt
+```
+
+Windows 访问 WSL 文件：
+- Ubuntu 终端中执行 `explorer.exe .`
+- 或者 Windows 资源管理器直接打开 `\\wsl$\Ubuntu-20.04\home`
+
+### WSL2 下 CUDA 环境
+更新 apt 源：
+```bash
+$ sudo apt update
+$ sudo apt upgrade
+```
+
+安装 gcc（安装 CUDA Toolkit 需要）：
+```bash
+$ sudo apt install gcc
+
+$ gcc --version
+gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+[英伟达官网](https://developer.nvidia.com/cuda-toolkit-archive)查找 WSL 版本 CUDA Toolkit 的安装脚本：
+```bash
+$ wget https://developer.download.nvidia.com/compute/cuda/11.3.0/local_installers/cuda_11.3.0_465.19.01_linux.run
+$ sudo sh cuda_11.3.0_465.19.01_linux.run
+
+===========
+= Summary =
+===========
+
+Driver:   Not Selected
+Toolkit:  Installed in /usr/local/cuda-11.3/
+Samples:  Installed in /home/jyx/, but missing recommended libraries
+
+Please make sure that
+ -   PATH includes /usr/local/cuda-11.3/bin
+ -   LD_LIBRARY_PATH includes /usr/local/cuda-11.3/lib64, or, add /usr/local/cuda-11.3/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-11.3/bin
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 465.00 is required for CUDA 11.3 functionality to work.
+To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+    sudo <CudaInstaller>.run --silent --driver
+
+Logfile is /var/log/cuda-installer.log
+```
+
+修改环境变量配置 `~/.bashrc`：
+```bash
+export PATH="/usr/local/cuda-11.3/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-11.3/lib64:$LD_LIBRARY_PATH"
+```
+
+```bash
+$ nvcc --version
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Mar_21_19:15:46_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.58
+Build cuda_11.3.r11.3/compiler.29745058_0
+```
+
+### WSL2 下 Python 环境
+
+Anconda 官网下载 [64-Bit(x86) Installer](https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh)，终端安装：
+```
+$ cd /mnt/c/Users/jsm/Downloads
+$ bash Anaconda3-2020.02-Linux-x86_64.sh
+```
+默认安装在用户下，例如 `/home/jyx/anaconda3`
+
+此时 `conda` 命令还不能在终端使用，修改环境变量：
+- 临时生效：终端执行 `export PATH=/home/jyx/anaconda3/bin:$PATH`，可以通过 `echo $PATH` 查看配置结果。仅对当前用户当前终端会话期间有效，关闭终端后失效
+- 永久生效：修改环境变量配置文件 `/etc/profile`（系统级） 或者 `~/.bashrc`（用户级，推荐），文件最后添加一行 `export PATH=/home/jyx/anaconda3/bin:$PATH`，最后执行 `source ~/.bashrc`。[Linux 文件 profile、bashrc、bash_profile 区别](https://zhuanlan.zhihu.com/p/405174594)
+
+```
+$ conda info
+
+     active environment : None
+       user config file : /home/jyx/.condarc
+ populated config files :
+          conda version : 4.12.0
+    conda-build version : 3.21.8
+         python version : 3.9.12.final.0
+       virtual packages : __linux=5.10.16.3=0
+                          __glibc=2.31=0
+                          __unix=0=0
+                          __archspec=1=x86_64
+       base environment : /home/jyx/anaconda3  (writable)
+      conda av data dir : /home/jyx/anaconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /home/jyx/anaconda3/pkgs
+                          /home/jyx/.conda/pkgs
+       envs directories : /home/jyx/anaconda3/envs
+                          /home/jyx/.conda/envs
+               platform : linux-64
+             user-agent : conda/4.12.0 requests/2.27.1 CPython/3.9.12 Linux/5.10.16.3-microsoft-standard-WSL2 ubuntu/20.04.4 glibc/2.31
+                UID:GID : 1000:1000
+             netrc file : None
+           offline mode : False
+```
 
 ## macOS 
 

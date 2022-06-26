@@ -67,6 +67,20 @@
     - [【B站】PyTorch 支持 M1 GPU 加速了! 提升有多大?](https://www.bilibili.com/video/BV1a341137Sb/?spm_id_from=333.788)
     - [Running PyTorch on the M1 GPU](https://sebastianraschka.com/blog/2022/pytorch-m1-gpu.html)
 
+## 部署
+- GPU
+    - TensorRT 是可以在 NVIDIA 各种 GPU 硬件平台下运行的一个 C++ 推理框架。我们利用 Pytorch、TF 或者其他框架训练好的模型，可以转化为 TensorRT 的格式，然后利用 TensorRT 推理引擎去运行我们这个模型，从而提升这个模型在英伟达 GPU 上运行的速度。在 GPU 服务器上部署的话 TensorRT 是首选！
+- CPU
+    - OpenVINO ，英特尔 CPU 端（x86 处理器）部署首选！
+- ARM（移动端）
+    - MNN
+    - TNN
+    - NCNN
+    - TVM
+- 参考
+    - [老潘的 AI 部署以及工业落地学习之路](https://mp.weixin.qq.com/s/1FitAKulp43hRyPYUzWuzg)
+    - [【知乎】谷歌抛弃 TensorFlow，押宝 JAX，其中都有哪些值得关注的信息？](https://www.zhihu.com/question/537823429/answer/2538173977)
+
 ## 论文精读 & 复现
 <table>
     <tr>
