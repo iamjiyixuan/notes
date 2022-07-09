@@ -40,7 +40,7 @@
 - [ImageNet](https://www.image-net.org/)
     - [【知乎】ImageNet 这八年：李飞飞和她改变的 AI 世界](https://zhuanlan.zhihu.com/p/28142670 )
 - https://www.payititi.com/
-- https://aistudio.baidu.com/aistudio/datasetoverview
+- [百度飞桨](https://aistudio.baidu.com/aistudio/datasetoverview)
 - https://www.kaggle.com/datasets
 - 目标检测
     - COCO https://cocodataset.org/#home
@@ -50,16 +50,26 @@
 - Python
 - C++
 
-## 开源项目
+## 开源项目 / 框架
 - https://opencv.org/
 - [OpenMMLab](https://github.com/open-mmlab)
+- [PaddleX](https://github.com/PaddlePaddle/PaddleX)
 - https://paperswithcode.com/
+- 扩展阅读
+    - [【知乎】GluonCV、OpenMMLab、Paddle 系列算法框架对比与思考](https://zhuanlan.zhihu.com/p/361038957)
 
 ## 图像处理
 - 
 
 ## 网络结构
 - backbone：主干网络，CV 中用于特征提取，常见的有 VGG、ResNet、MobileNet 等
+
+## 指标
+- Precision 精确率，是针对预测结果而言的，它表示的是预测为正的样本中有多少是真正的正样本。那么预测为正就有两种可能了，一种就是把正类预测为正类（TP），另一种就是把负类预测为正类（FP），也就是 `Precision = TP / (TP + FP)`
+- Recall 召回率，也称 Sensitivity 敏感性，是针对原来的样本而言的，它表示的是样本中的正例有多少被预测正确了。那也有两种可能，一种是把原来的正类预测成正类（TP），另一种就是把原来的正类预测为负类（FN），也就是 `Recall = TP / (TP + FN)`
+- mAP（mean Average Precision，平均精度均值）是目标检测算法的主要评估指标
+- FLOPs（Floating Point Operations）指浮点运算数，理解为计算量。可以用来衡量算法/模型的复杂度。
+- params
 
 ## Benchmark
 - [Deep Learning GPU Benchmarks 2021](https://www.aime.info/blog/deep-learning-gpu-benchmarks-2021/)
@@ -69,9 +79,9 @@
 
 ## 部署
 - GPU
-    - TensorRT 是可以在 NVIDIA 各种 GPU 硬件平台下运行的一个 C++ 推理框架。我们利用 Pytorch、TF 或者其他框架训练好的模型，可以转化为 TensorRT 的格式，然后利用 TensorRT 推理引擎去运行我们这个模型，从而提升这个模型在英伟达 GPU 上运行的速度。在 GPU 服务器上部署的话 TensorRT 是首选！
+    - TensorRT - 可以在 NVIDIA 各种 GPU 硬件平台下运行的一个 C++ 推理框架。我们利用 Pytorch、TF 或者其他框架训练好的模型，可以转化为 TensorRT 的格式，然后利用 TensorRT 推理引擎去运行我们这个模型，从而提升这个模型在英伟达 GPU 上运行的速度。在 GPU 服务器上部署的话 TensorRT 是首选！
 - CPU
-    - OpenVINO ，英特尔 CPU 端（x86 处理器）部署首选！
+    - OpenVINO - 英特尔 CPU 端（x86 处理器）部署首选！
 - ARM（移动端）
     - MNN
     - TNN
@@ -209,14 +219,20 @@
             <a target="_blank" href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
             <a target="_blank" href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a><br />
             <hr />
-            arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection <a href="">pdf</a><br />
+            arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection <a href="https://arxiv.org/pdf/2004.10934v1.pdf">pdf</a>, <a href="https://github.com/AlexeyAB/darknet">code</a><br />
             <a target="_blank" href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a><br />
             <hr />
-            YOLO-v5（非官方承认）：<a target="_blank" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
+            YOLO-v5（非官方）：<a target="_blank" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
             <hr />
             YOLOF：CVPR-2021, You Only Look One-level Feature <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_You_Only_Look_One-Level_Feature_CVPR_2021_paper.pdf">pdf</a><br />
             <hr />
             YOLOX：arXiv-2021, Exceeding YOLO Series in 2021 <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a><br />
+            <hr />
+            YOLO-v6（by 美团，非官方）：<a href="https://github.com/meituan/YOLOv6">https://github.com/meituan/YOLOv6</a><br />
+            <a href="https://tech.meituan.com/2022/06/23/yolov6-a-fast-and-accurate-target-detection-framework-is-opening-source.html">YOLOv6：又快又准的目标检测框架开源啦</a>
+            <hr />
+            arXiv-2022, YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors <a href="https://arxiv.org/pdf/2207.02696v1.pdf">pdf</a>, <a href="https://github.com/WongKinYiu/yolov7">code</a><br />
+            <a href="https://zhuanlan.zhihu.com/p/538930719">【知乎】YOLOv4 团队打造 YOLOv7！最先进的实时目标检测网络来了！</a>
         </td>
     </tr>
     <tr>
