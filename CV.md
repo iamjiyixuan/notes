@@ -90,6 +90,7 @@
 - 参考
     - [老潘的 AI 部署以及工业落地学习之路](https://mp.weixin.qq.com/s/1FitAKulp43hRyPYUzWuzg)
     - [【知乎】谷歌抛弃 TensorFlow，押宝 JAX，其中都有哪些值得关注的信息？](https://www.zhihu.com/question/537823429/answer/2538173977)
+    - [【知乎】机器学习平台基础架构](https://zhuanlan.zhihu.com/p/538160449) by 云音乐技术团队 2022-07-06
 
 ## 论文精读 & 复现
 <table>
@@ -116,8 +117,8 @@
         </td>
     </tr>
     <tr>
-        <td rowspan="2">GoogLeNet</td>
-        <td rowspan="2">classification</td>
+        <td rowspan="4">GoogLeNet</td>
+        <td rowspan="4">classification</td>
         <td>
             CVPR-2015, Going deeper with convolutions <a href="https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf">pdf</a><br />
             提出多尺度卷积模块<br />
@@ -127,10 +128,16 @@
         <td>
             arXiv-2015, Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift <a href="http://data-science.wiki/images/Batch_Normalization-_Accelerating_Deep_Network_Training_by_Reducing_Internal_Covariate_Shift_1502.03167v3.pdf">pdf</a><br />
             提出 BN 层<br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+         <td>
             CVPR-2016, Rethinking the Inception Architecture for Computer Vision <a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf">pdf</a><br />
             提出卷积分解<br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+         <td>
             AAAI-2017, Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning <a href="https://www.cs.cmu.edu/~jeanoh/16-785/papers/szegedy-aaai2017-inception-v4.pdf">pdf</a><br />
         </td>
     </tr>
@@ -146,17 +153,18 @@
         </td>
     </tr>
     <tr>
-        <td>ResNet</td>
-        <td>classification</td>
+        <td rowspan="2">ResNet</td>
+        <td rowspan="2">classification</td>
         <td>
             CVPR-2016, Deep Residual Learning for Image Recognition <a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">pdf</a><br />
-            <br />
             预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/resnet">https://github.com/open-mmlab/mmclassification/tree/master/configs/resnet</a><br />
             <a href="https://www.bilibili.com/video/BV1Fb4y1h73E/?spm_id_from=333.788">【B站】撑起计算机视觉半边天的 ResNet【论文精读】by 李沐</a><br />
             <a href="https://www.bilibili.com/video/BV1P3411y7nn/?spm_id_from=333.788.recommend_more_video.0">【B站】ResNet 论文逐段精读【论文精读】by 李沐</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             ResNeXt：CVPR-2017, Aggregated Residual Transformations for Deep Neural Networks <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Xie_Aggregated_Residual_Transformations_CVPR_2017_paper.pdf">pdf</a><br />
-            <br />
             预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/resnext">https://github.com/open-mmlab/mmclassification/tree/master/configs/resnext</a>
         </td>
     </tr>
@@ -169,28 +177,34 @@
         </td>
     </tr>
     <tr>
-        <td>MobileNet</td>
-        <td>轻量级网络</td>
+        <td rowspan="3">MobileNet</td>
+        <td rowspan="3">轻量级网络</td>
         <td>
-            arXiv-2017, MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications <br />
-            <br />
-            <a href="https://zhuanlan.zhihu.com/p/70703846">【知乎】轻量级神经网络“巡礼”（二）—— MobileNet，从V1到V3</a><br />
-            <hr />
-            CVPR-2018, MobileNetV2: Inverted Residuals and Linear Bottlenecks <br />
-            <hr />
+            arXiv-2017, MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications <a href="https://arxiv.org/pdf/1704.04861.pdf">pdf</a><br />
+            <a href="https://zhuanlan.zhihu.com/p/70703846">【知乎】轻量级神经网络“巡礼”（二）—— MobileNet，从 V1 到 V3</a><br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            CVPR-2018, MobileNetV2: Inverted Residuals and Linear Bottlenecks <a href="https://arxiv.org/pdf/1801.04381.pdf">pdf</a><br />
+        </td>
+    </tr>
+    <tr>
+        <td>
             ICCV-2019, Searching for MobileNetV3 <br />
         </td>
     </tr>
     <tr>
-        <td>ShuffleNet</td>
-        <td>轻量级网络</td>
+        <td rowspan="2">ShuffleNet</td>
+        <td rowspan="2">轻量级网络</td>
         <td>
             CVPR-2018, ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_ShuffleNet_An_Extremely_CVPR_2018_paper.pdf">pdf</a><br />
-            <br />
             预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v1">https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v1</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             ECCV-2018, Shufflenet v2: Practical guidelines for efficient cnn architecture design <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Ningning_Light-weight_CNN_Architecture_ECCV_2018_paper.pdf">pdf</a><br />
-            <br />
             <a href="https://zhuanlan.zhihu.com/p/67009992">【知乎】轻量级神经网络“巡礼”（一）—— ShuffleNetV2</a><br />
             预训练模型：<a href="https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v2">https://github.com/open-mmlab/mmclassification/tree/master/configs/shufflenet_v2</a>
         </td>
@@ -210,37 +224,64 @@
         <td>detection（one-stage）</td>
         <td>
             ECCV 2016, Single Shot MultiBox Detector <a href="https://www.cs.unc.edu/~wliu/papers/ssd.pdf">pdf</a><br />
-            <a href="https://zhuanlan.zhihu.com/p/31427288">【知乎】SSD 目标检测</a><br />
-            <a href="https://www.yuque.com/docs/share/5da9151c-14ee-4473-8975-28f9badd9197">【语雀】【目标检测实战】Pytorch—SSD 模型训练（VOC 数据集）</a>
+            <a href="https://zhuanlan.zhihu.com/p/31427288">【知乎】SSD 目标检测 by 白裳</a><br />
+            <a href="https://www.yuque.com/docs/share/5da9151c-14ee-4473-8975-28f9badd9197">【语雀】Pytorch—SSD 模型训练（VOC 数据集）【目标检测实战】</a>
         </td>
     </tr>
     <tr>
-        <td>YOLO</td>
-        <td>detection（one-stage）</td>
+        <td rowspan="10">YOLO</td>
+        <td rowspan="10">detection（one-stage）</td>
         <td>
             YOLO 官网：<a href="https://pjreddie.com/">https://pjreddie.com/</a><br />
             <a href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             CVPR-2016, You Only Look Once: Unified, Real-Time Object Detection <a href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             CVPR-2017, YOLO9000: Better, Faster, Stronger <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf">pdf</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             arXiv-2018, YOLOv3: An Incremental Improvement <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
             <a href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
             <a href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection <a href="https://arxiv.org/pdf/2004.10934v1.pdf">pdf</a>, <a href="https://github.com/AlexeyAB/darknet">code</a><br />
             <a href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             YOLO-v5（非官方）：<a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             YOLOF：CVPR-2021, You Only Look One-level Feature <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_You_Only_Look_One-Level_Feature_CVPR_2021_paper.pdf">pdf</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             YOLOX：arXiv-2021, Exceeding YOLO Series in 2021 <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a><br />
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             YOLO-v6（by 美团，非官方）：<a href="https://github.com/meituan/YOLOv6">https://github.com/meituan/YOLOv6</a><br />
             <a href="https://tech.meituan.com/2022/06/23/yolov6-a-fast-and-accurate-target-detection-framework-is-opening-source.html">YOLOv6：又快又准的目标检测框架开源啦</a>
-            <hr />
+        </td>
+    </tr>
+    <tr>
+        <td>
             arXiv-2022, YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors <a href="https://arxiv.org/pdf/2207.02696v1.pdf">pdf</a>, <a href="https://github.com/WongKinYiu/yolov7">code</a><br />
             <a href="https://zhuanlan.zhihu.com/p/538930719">【知乎】YOLOv4 团队打造 YOLOv7！最先进的实时目标检测网络来了！</a>
         </td>
