@@ -271,55 +271,23 @@ Windows 访问 WSL 文件：
 ### 远程连接 WSL2
 
 安装网络工具（ifconfig、netstat 等）
-```
+```bash
 $ sudo apt install net-tools
 ```
 
 查看所有占用端口
-```
+```bash
 $ netstat -ano
 ```
 
 查看指定端口
-```
-$ netstat -aon|findstr "8081"
-```
-
-重启 ssh 服务：
-```
-$ sudo service ssh restart
+```bash
+$ netstat -aon|findstr "22"
 ```
 
-查看 ssh 服务状态：
-```
-$ sudo service ssh status
+**方式一：密码登录**。修改配置文件 `/etc/ssh/sshd_config` 允许使用密码登录：`PasswordAuthentication` 置为 yes
 
- * sshd is running
-```
-
-Windows 主机监听 2222 端口，然后转发至 WSL 的 22 端口：
-```
-$ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=2222 connectaddress=172.24.198.129 connectport=22
-```
-
-查看当前端口转发设置：
-```
-$ netsh interface portproxy show all
-
-侦听 ipv4:                 连接到 ipv4:
-
-地址            端口        地址            端口
---------------- ----------  --------------- ----------
-0.0.0.0         2222        172.24.198.129  22
-```
-
-#### 登录方式一：密码登录
-
-WSL 侧，修改配置文件 `/etc/ssh/sshd_config` 允许使用密码登录：`PasswordAuthentication` 置为 yes
-
-#### 登录方式二：公钥登录
-
-WSL 侧，生成密钥对，默认创建到 `/home/{user}/.ssh` 目录下，其中 `id_rsa` 为私钥，`id_rsa.pub` 为公钥：
+**方式二：公钥登录**。生成密钥对，默认创建到 `/home/{user}/.ssh` 目录下，其中 `id_rsa` 为私钥，`id_rsa.pub` 为公钥：
 ```bash
 $ ssh-keygen -t rsa
 
@@ -344,6 +312,142 @@ The key's randomart image is:
 |o +. .o o.       |
 |++. .    oo      |
 +----[SHA256]-----+
+```
+
+重启 ssh 服务：
+```
+$ sudo service ssh restart
+```
+
+查看 ssh 服务状态：
+```
+$ sudo service ssh status
+
+ * sshd is running
+```
+
+尝试从 Windows 主机连接 ssh：
+```
+$ ssh -v jsm@localhost
+
+OpenSSH_for_Windows_8.1p1, LibreSSL 3.0.2
+debug1: Connecting to localhost [::1] port 22.
+debug1: Connection established.
+debug1: identity file C:\\Users\\jsm/.ssh/id_rsa type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_rsa-cert type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_dsa type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_dsa-cert type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_ecdsa type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_ecdsa-cert type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_ed25519 type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_ed25519-cert type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_xmss type -1
+debug1: identity file C:\\Users\\jsm/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_for_Windows_8.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_8.2p1 Ubuntu-4ubuntu0.5
+debug1: match: OpenSSH_8.2p1 Ubuntu-4ubuntu0.5 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to localhost:22 as 'jsm'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ecdsa-sha2-nistp256 SHA256:nK+a6+hisNf8y/kQgcvN7Dr9h3+Ak2DVB/vHCBQzNQY
+debug1: read_passphrase: can't open /dev/tty: No such file or directory
+The authenticity of host 'localhost (::1)' can't be established.
+ECDSA key fingerprint is SHA256:nK+a6+hisNf8y/kQgcvN7Dr9h3+Ak2DVB/vHCBQzNQY.
+
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes # 这里输入 yes
+
+Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: pubkey_prepare: ssh_get_authentication_socket: No such file or directory
+debug1: Will attempt key: C:\\Users\\jsm/.ssh/id_rsa
+debug1: Will attempt key: C:\\Users\\jsm/.ssh/id_dsa
+debug1: Will attempt key: C:\\Users\\jsm/.ssh/id_ecdsa
+debug1: Will attempt key: C:\\Users\\jsm/.ssh/id_ed25519
+debug1: Will attempt key: C:\\Users\\jsm/.ssh/id_xmss
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: publickey
+debug1: Trying private key: C:\\Users\\jsm/.ssh/id_rsa
+debug1: Trying private key: C:\\Users\\jsm/.ssh/id_dsa
+debug1: Trying private key: C:\\Users\\jsm/.ssh/id_ecdsa
+debug1: Trying private key: C:\\Users\\jsm/.ssh/id_ed25519
+debug1: Trying private key: C:\\Users\\jsm/.ssh/id_xmss
+debug1: Next authentication method: password
+debug1: read_passphrase: can't open /dev/tty: No such file or directory
+
+jsm@localhost's password: # 输入 WSL 用户登录密码
+
+debug1: Authentication succeeded (password).
+Authenticated to localhost ([::1]:22).
+debug1: channel 0: new [client-session]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: network
+debug1: ENABLE_VIRTUAL_TERMINAL_INPUT is supported. Reading the VTSequence from console
+debug1: ENABLE_VIRTUAL_TERMINAL_PROCESSING is supported. Console supports the ansi parsing
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.10.16.3-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Jul 10 14:26:57 CST 2022
+
+  System load:  0.01               Processes:             10
+  Usage of /:   0.6% of 250.98GB   Users logged in:       0
+  Memory usage: 0%                 IPv4 address for eth0: 172.29.247.176
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+```
+
+Windows 主机设置防火墙入站规则，可以在 `控制面板 --> 系统和安全 --> Windows Defender 防火墙 --> 高级设置 --> 入站规则` 查看：
+```
+$ netsh advfirewall firewall add rule name=WSL2 dir=in action=allow protocol=TCP localport=2222
+```
+
+Windows 主机监听 2222 端口，然后转发至 WSL 的 22 端口：
+```
+$ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=2222 connectaddress=172.29.247.176 connectport=22
+```
+
+查看当前端口转发设置：
+```
+$ netsh interface portproxy show all
+
+侦听 ipv4:                 连接到 ipv4:
+
+地址            端口        地址            端口
+--------------- ----------  --------------- ----------
+0.0.0.0         2222        172.24.198.129  22
+```
+
+局域网内登录：
+```
+$ ssh -v jsm@192.168.50.108 -p 2222
 ```
 
 ### WSL2 下 CUDA 环境
