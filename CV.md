@@ -98,7 +98,8 @@
         <td>LeNet</td>
         <td>classification</td>
         <td>
-            1998, Gradient-based learning applied to document recognition <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf">pdf</a><br />
+            <em>1998, Gradient-based learning applied to document recognition</em> <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf">pdf</a><br />
+            <br />
             <a href="https://zh.d2l.ai/chapter_convolutional-neural-networks/lenet.html">《动手学深度学习》6.6. 卷积神经网络（LeNet）</a><br />
             <a href="https://zhuanlan.zhihu.com/p/63910035">【知乎】再认识 Yann LeCun，一个可能是拥有最多中文名的男人【AI大咖】by 言有三</a>
         </td>

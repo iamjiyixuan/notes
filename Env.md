@@ -268,6 +268,84 @@ Windows 访问 WSL 文件：
 - Ubuntu 终端中执行 `explorer.exe .`
 - 或者 Windows 资源管理器直接打开 `\\wsl$\Ubuntu-20.04\home`
 
+### 远程连接 WSL2
+
+安装网络工具（ifconfig、netstat 等）
+```
+$ sudo apt install net-tools
+```
+
+查看所有占用端口
+```
+$ netstat -ano
+```
+
+查看指定端口
+```
+$ netstat -aon|findstr "8081"
+```
+
+重启 ssh 服务：
+```
+$ sudo service ssh restart
+```
+
+查看 ssh 服务状态：
+```
+$ sudo service ssh status
+
+ * sshd is running
+```
+
+Windows 主机监听 2222 端口，然后转发至 WSL 的 22 端口：
+```
+$ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=2222 connectaddress=172.24.198.129 connectport=22
+```
+
+查看当前端口转发设置：
+```
+$ netsh interface portproxy show all
+
+侦听 ipv4:                 连接到 ipv4:
+
+地址            端口        地址            端口
+--------------- ----------  --------------- ----------
+0.0.0.0         2222        172.24.198.129  22
+```
+
+#### 登录方式一：密码登录
+
+WSL 侧，修改配置文件 `/etc/ssh/sshd_config` 允许使用密码登录：`PasswordAuthentication` 置为 yes
+
+#### 登录方式二：公钥登录
+
+WSL 侧，生成密钥对，默认创建到 `/home/{user}/.ssh` 目录下，其中 `id_rsa` 为私钥，`id_rsa.pub` 为公钥：
+```bash
+$ ssh-keygen -t rsa
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/jyx/.ssh/id_rsa):
+Created directory '/home/jyx/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/jyx/.ssh/id_rsa
+Your public key has been saved in /home/jyx/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:J2GuipaiDmT3fODXQg4LLsHTM9fG+zsFxkMMZuEnFWw jyx@JIYixuan-ThinkPadX1-F6G67U7G
+The key's randomart image is:
++---[RSA 3072]----+
+|       ==o.      |
+|      + .E       |
+|       o*.       |
+|. .   ooo*       |
+| * * + =S +      |
+|o = O B.oo .     |
+|.. o =.* ..      |
+|o +. .o o.       |
+|++. .    oo      |
++----[SHA256]-----+
+```
+
 ### WSL2 下 CUDA 环境
 更新 apt 源：
 ```bash
@@ -370,6 +448,32 @@ $ conda info
              netrc file : None
            offline mode : False
 ```
+
+修改 `/home/jyx/.condarc`
+```bash
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+pkgs_dirs:
+  - /mnt/d/.conda4wsl/pkgs
+envs_dirs:
+  - /mnt/d/.conda4wsl/envs
+```
+
+### WSL2 下 Docker 环境
+...
 
 ## macOS 
 
