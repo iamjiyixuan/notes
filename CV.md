@@ -233,57 +233,62 @@
         <td rowspan="10">YOLO</td>
         <td rowspan="10">detection（one-stage）</td>
         <td>
-            YOLO 官网：<a href="https://pjreddie.com/">https://pjreddie.com/</a><br />
-            <a href="https://zhuanlan.zhihu.com/p/136382095">【知乎】目标检测之 YOLO 算法：YOLOv1,YOLOv2,YOLOv3,TinyYOLO,YOLOv4,YOLOv5,YOLObile,YOLOF,YOLOX 详解</a><br />
+            YOLO 官网：<br />
+            <a href="https://pjreddie.com/">https://pjreddie.com/</a><br />
+            <a href="https://github.com/pjreddie/darknet">https://github.com/pjreddie/darknet</a>
         </td>
     </tr>
     <tr>
         <td>
-            CVPR-2016, You Only Look Once: Unified, Real-Time Object Detection <a href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
+            <strong>YOLO-v1</strong>: <em>CVPR-2016, You Only Look Once: Unified, Real-Time Object Detection</em> <a href="https://pjreddie.com/media/files/papers/yolo_1.pdf">pdf</a><br />
         </td>
     </tr>
     <tr>
         <td>
-            CVPR-2017, YOLO9000: Better, Faster, Stronger <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf">pdf</a><br />
+            <strong>YOLO-v2</strong>: <em>CVPR-2017, YOLO9000: Better, Faster, Stronger</em> <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.pdf">pdf</a><br />
         </td>
     </tr>
     <tr>
         <td>
-            arXiv-2018, YOLOv3: An Incremental Improvement <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
+            <strong>YOLO-v3</strong>: <em>arXiv-2018, YOLOv3: An Incremental Improvement</em> <a href="https://pjreddie.com/media/files/papers/YOLOv3.pdf">pdf</a><br />
+            <br />
             <a href="https://zhuanlan.zhihu.com/p/108440835">【知乎】YOLO 之父 Joseph Redmon 宣布退出 CV 界，坦言无法忽视自己工作带来的负面影响</a><br />
             <a href="https://www.bilibili.com/video/BV1Hp4y1y788?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">【B站】Pytorch 搭建自己的 YOLO3 目标检测平台</a><br />
         </td>
     </tr>
     <tr>
         <td>
-            arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection <a href="https://arxiv.org/pdf/2004.10934v1.pdf">pdf</a>, <a href="https://github.com/AlexeyAB/darknet">code</a><br />
+            <strong>YOLO-v4</strong>: <em>arXiv-2020, YOLOv4: Optimal Speed and Accuracy of Object Detection</em> <a href="https://arxiv.org/pdf/2004.10934v1.pdf">pdf</a>, <a href="https://github.com/AlexeyAB/darknet">code</a><br />
+            <br />
             <a href="https://zhuanlan.zhihu.com/p/135909702">【知乎】大神接棒，YOLOv4 来了！</a><br />
         </td>
     </tr>
     <tr>
         <td>
-            YOLO-v5（非官方）：<a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
+            <strong>YOLO-v5</strong>（非官方）：<a href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a> <br />
         </td>
     </tr>
     <tr>
         <td>
-            YOLOF：CVPR-2021, You Only Look One-level Feature <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_You_Only_Look_One-Level_Feature_CVPR_2021_paper.pdf">pdf</a><br />
+            YOLOF：<em>CVPR-2021, You Only Look One-level Feature</em> <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_You_Only_Look_One-Level_Feature_CVPR_2021_paper.pdf">pdf</a>, <a href="https://github.com/megvii-model/YOLOF">code</a><br />
         </td>
     </tr>
     <tr>
         <td>
-            YOLOX：arXiv-2021, Exceeding YOLO Series in 2021 <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a><br />
+            YOLOX：<em>arXiv-2021, Exceeding YOLO Series in 2021</em> <a href="https://arxiv.org/pdf/2107.08430v2.pdf">pdf</a>, <a href="https://github.com/Megvii-BaseDetection/YOLOX">code</a><br />
         </td>
     </tr>
     <tr>
         <td>
-            YOLO-v6（by 美团，非官方）：<a href="https://github.com/meituan/YOLOv6">https://github.com/meituan/YOLOv6</a><br />
-            <a href="https://tech.meituan.com/2022/06/23/yolov6-a-fast-and-accurate-target-detection-framework-is-opening-source.html">YOLOv6：又快又准的目标检测框架开源啦</a>
+             <strong>YOLO-v6</strong>（2022 by 美团，非官方）：<a href="https://github.com/meituan/YOLOv6">https://github.com/meituan/YOLOv6</a><br />
+            <br />
+            <a href="https://tech.meituan.com/2022/06/23/yolov6-a-fast-and-accurate-target-detection-framework-is-opening-source.html">YOLOv6：又快又准的目标检测框架开源啦</a> by 美团技术团队 2022-06-23
         </td>
     </tr>
     <tr>
         <td>
-            arXiv-2022, YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors <a href="https://arxiv.org/pdf/2207.02696v1.pdf">pdf</a>, <a href="https://github.com/WongKinYiu/yolov7">code</a><br />
+            <strong>YOLO-v7</strong>: <em>arXiv-2022, YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors</em> <a href="https://arxiv.org/pdf/2207.02696v1.pdf">pdf</a>, <a href="https://github.com/WongKinYiu/yolov7">code</a><br />
+            <br />
             <a href="https://zhuanlan.zhihu.com/p/538930719">【知乎】YOLOv4 团队打造 YOLOv7！最先进的实时目标检测网络来了！</a>
         </td>
     </tr>

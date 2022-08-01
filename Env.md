@@ -553,7 +553,7 @@ $ conda info
            offline mode : False
 ```
 
-修改 `/home/jyx/.condarc`
+修改 `~/.condarc`
 ```bash
 channels:
   - defaults
