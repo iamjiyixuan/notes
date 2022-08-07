@@ -6,9 +6,9 @@
 
 ## 球队
 <table>
-    <th>
+    <tr style="text-align:center;background-color:#041e42;color:white;">
         <td colspan="3">美国联盟，美联（American League, AL）</td>
-    </th>
+    </tr>
     <tr>
         <td rowspan="5">东区（AL East）</td>
         <td style="">
