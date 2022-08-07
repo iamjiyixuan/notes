@@ -1,5 +1,47 @@
 # MLB
 
+美国职业棒球大联盟 Major League Baseball, MLB
+
+美国职业棒球小联盟 Minor League Baseball, MiLB
+
+## 球队
+
+<table border="1">
+    <tr>
+        <td colspan="3">美国联盟，美联（American League, AL）</td>
+    </tr>
+    <tr>
+        <td rowspan="5">东区（AL East）</td>
+        <td style="width:20px;">
+            <img style="display:block;margin:0 auto;" src="https://www.mlbstatic.com/team-logos/110.svg">
+        </td>
+        <td>巴尔的摩金莺（Baltimore Orioles, BAL）</td>
+    </tr>
+        <td style="width:20px;">
+            <img style="display:block;margin:0 auto;" src="https://www.mlbstatic.com/team-logos/111.svg">
+        </td>
+        <td>波士顿红袜（Boston Red Sox, BOS）</td>
+    </tr>
+    <tr>
+        <td>
+            <img style="display:block;width:20px;height:20px" src="https://www.mlbstatic.com/team-logos/147.svg">
+        </td>
+        <td>纽约洋基（New York Yankees, NYY）</td>
+    </tr>
+    <tr>
+        <td>
+            <img style="display:block;width:20px;height:20px" src="https://www.mlbstatic.com/team-logos/139.svg">
+        </td>
+        <td>坦帕湾光芒（Tampa Bay Rays, TB）</td>
+    </tr>
+    <tr>
+        <td>
+            <img style="display:block;width:20px;height:20px" src="https://www.mlbstatic.com/team-logos/141.svg">
+        </td>
+        <td>多伦多蓝鸟（Toronto Blue Jays, TOR）</td>
+    </tr>
+</table>
+
 ## 术语
 <table>
     <tr>
@@ -212,3 +254,25 @@
         <td></td>
     </tr>
 </table>
+
+- Positions, POS 位置
+    - Pitcher 投手
+    - Catcher 捕手
+    - Infielder 内野手
+        - First Base, 1B 一垒手
+        - Second Base, 2B 二垒手
+        - Third Base, 3B 三垒手
+        - Shortstop, SS 游击手
+    - Outfielder 外野手
+        - Left Field, LF 左外野手
+        - Center Field, CF 中外野手
+        - Right Field, RF 右外野手
+    - Two-Way Player 二刀流
+    - Designated Hitter, DH	指定打击
+- 打者技术统计
+    - At bat, AB 打数
+    - Hit, H 安打
+    - Batting average, BA 打击率 = 安打 / 打数
+- IL-10, 10-day injured list 十日伤病名单
+
+# The Show 22
