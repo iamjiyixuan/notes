@@ -6,15 +6,21 @@
 
 ## 球队
 <table>
-    <tr style="text-align:center;background-color:#041e42;color:white;">
-        <td colspan="3">美国联盟，美联（American League, AL）</td>
+    <tr>
+        <td></td>
+        <td colspan="2" style="text-align:center;background-color:#041e42;color:white;">美国联盟，美联（American League, AL）</td>
+        <td colspan="2" style="text-align:center;background-color:#041e42;color:white;">国家联盟，国联（National League，NL）</td>
     </tr>
     <tr>
-        <td rowspan="5">东区（AL East）</td>
+        <td rowspan="5">东区（East）</td>
         <td style="">
             <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/110.svg">
         </td>
         <td>巴尔的摩金莺（Baltimore Orioles, BAL）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/144.svg">
+        </td>
+        <td>亚特兰大勇士（Atlanta Braves, ATL）</td>
     </tr>
         <td style="">
             <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/111.svg">
@@ -40,7 +46,7 @@
         <td>多伦多蓝鸟（Toronto Blue Jays, TOR）</td>
     </tr>
     <tr>
-        <td rowspan="5">中区（AL Central）</td>
+        <td rowspan="5">中区（Central）</td>
         <td style="">
             <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/145.svg">
         </td>
@@ -71,7 +77,7 @@
         <td>明尼苏达双城（Minnesota Twins, MIN）</td>
     </tr>
     <tr>
-        <td rowspan="5">西区（AL West）</td>
+        <td rowspan="5">西区（West）</td>
         <td style="">
             <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/117.svg">
         </td>
