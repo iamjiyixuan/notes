@@ -6,9 +6,9 @@
 
 ## 球队
 <table>
-    <tr>
+    <th>
         <td colspan="3">美国联盟，美联（American League, AL）</td>
-    </tr>
+    </th>
     <tr>
         <td rowspan="5">东区（AL East）</td>
         <td style="">
@@ -57,6 +57,49 @@
             <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/116.svg">
         </td>
         <td>底特律老虎（Detroit Tigers, DET）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/118.svg">
+        </td>
+        <td>堪萨斯城皇家（Kansas City Royals, KC）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/142.svg">
+        </td>
+        <td>明尼苏达双城（Minnesota Twins, MIN）</td>
+    </tr>
+    <tr>
+        <td rowspan="5">西区（AL West）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/117.svg">
+        </td>
+        <td>休斯敦太空人（Houston Astros, HOU）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/108.svg">
+        </td>
+        <td>洛杉矶天使（Los Angeles Angels, LAA）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/133.svg">
+        </td>
+        <td>奥克兰运动家（Oakland Athletics, OAK）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/136.svg">
+        </td>
+        <td>西雅图水手（Seattle Mariners, SEA）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/140.svg">
+        </td>
+        <td>得克萨斯游骑兵（Texas Rangers, TEX）</td>
     </tr>
 </table>
 
