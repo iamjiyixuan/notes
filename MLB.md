@@ -5,40 +5,58 @@
 美国职业棒球小联盟 Minor League Baseball, MiLB
 
 ## 球队
-
-<table border="1">
+<table>
     <tr>
         <td colspan="3">美国联盟，美联（American League, AL）</td>
     </tr>
     <tr>
         <td rowspan="5">东区（AL East）</td>
-        <td style="width:20px;">
-            <img style="display:block;margin:0 auto;" src="https://www.mlbstatic.com/team-logos/110.svg">
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/110.svg">
         </td>
         <td>巴尔的摩金莺（Baltimore Orioles, BAL）</td>
     </tr>
-        <td style="width:20px;">
-            <img style="display:block;margin:0 auto;" src="https://www.mlbstatic.com/team-logos/111.svg">
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/111.svg">
         </td>
         <td>波士顿红袜（Boston Red Sox, BOS）</td>
     </tr>
     <tr>
-        <td>
-            <img style="display:block;width:20px;height:20px" src="https://www.mlbstatic.com/team-logos/147.svg">
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/147.svg">
         </td>
         <td>纽约洋基（New York Yankees, NYY）</td>
     </tr>
     <tr>
-        <td>
-            <img style="display:block;width:20px;height:20px" src="https://www.mlbstatic.com/team-logos/139.svg">
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/139.svg">
         </td>
         <td>坦帕湾光芒（Tampa Bay Rays, TB）</td>
     </tr>
     <tr>
-        <td>
-            <img style="display:block;width:20px;height:20px" src="https://www.mlbstatic.com/team-logos/141.svg">
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/141.svg">
         </td>
         <td>多伦多蓝鸟（Toronto Blue Jays, TOR）</td>
+    </tr>
+    <tr>
+        <td rowspan="5">中区（AL Central）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/145.svg">
+        </td>
+        <td>芝加哥白袜（Chicago White Sox, CWS）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/114.svg">
+        </td>
+        <td>克里夫兰守护者（Cleveland Guardians, CLE）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/116.svg">
+        </td>
+        <td>底特律老虎（Detroit Tigers, DET）</td>
     </tr>
 </table>
 
