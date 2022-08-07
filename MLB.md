@@ -7,9 +7,9 @@
 ## 球队
 <table>
     <tr>
-        <td></td>
-        <td colspan="2" style="text-align:center;background-color:#041e42;color:white;">美国联盟，美联（American League, AL）</td>
-        <td colspan="2" style="text-align:center;background-color:#041e42;color:white;">国家联盟，国联（National League，NL）</td>
+        <th></th>
+        <th colspan="2">美国联盟，美联（American League, AL）</th>
+        <th colspan="2">国家联盟，国联（National League，NL）</th>
     </tr>
     <tr>
         <td rowspan="5">东区（East）</td>
@@ -26,6 +26,10 @@
             <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/111.svg">
         </td>
         <td>波士顿红袜（Boston Red Sox, BOS）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/146.svg">
+        </td>
+        <td>迈阿密马林鱼（Miami Marlins, MIA）</td>
     </tr>
     <tr>
         <td style="">
