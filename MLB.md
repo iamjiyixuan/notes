@@ -1,5 +1,170 @@
 # MLB
 
+美国职业棒球大联盟 Major League Baseball, MLB
+
+美国职业棒球小联盟 Minor League Baseball, MiLB
+
+## 球队
+<table>
+    <tr>
+        <th></th>
+        <th colspan="2">美国联盟，美联（American League, AL）</th>
+        <th colspan="2">国家联盟，国联（National League，NL）</th>
+    </tr>
+    <tr>
+        <td rowspan="5">东区（East）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/110.svg">
+        </td>
+        <td>巴尔的摩金莺（Baltimore Orioles, BAL）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/144.svg">
+        </td>
+        <td>亚特兰大勇士（Atlanta Braves, ATL）</td>
+    </tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/111.svg">
+        </td>
+        <td>波士顿红袜（Boston Red Sox, BOS）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/146.svg">
+        </td>
+        <td>迈阿密马林鱼（Miami Marlins, MIA）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/147.svg">
+        </td>
+        <td>纽约洋基（New York Yankees, NYY）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/121.svg">
+        </td>
+        <td>纽约大都会（New York Mets, NYM）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/139.svg">
+        </td>
+        <td>坦帕湾光芒（Tampa Bay Rays, TB）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/143.svg">
+        </td>
+        <td>费城费城人（Philadelphia Phillies, PHI）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/141.svg">
+        </td>
+        <td>多伦多蓝鸟（Toronto Blue Jays, TOR）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/120.svg">
+        </td>
+        <td>华盛顿国民（Washington Nationals, WSH）</td>
+    </tr>
+    <tr>
+        <td rowspan="5">中区（Central）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/145.svg">
+        </td>
+        <td>芝加哥白袜（Chicago White Sox, CWS）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/112.svg">
+        </td>
+        <td>芝加哥小熊（Chicago Cubs, CHC）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/114.svg">
+        </td>
+        <td>克里夫兰守护者（Cleveland Guardians, CLE）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/113.svg">
+        </td>
+        <td>辛辛那提红人（Cincinnati Reds, CIN）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/116.svg">
+        </td>
+        <td>底特律老虎（Detroit Tigers, DET）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/158.svg">
+        </td>
+        <td>密尔沃基酿酒人（Milwaukee Brewers, MIL）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/118.svg">
+        </td>
+        <td>堪萨斯城皇家（Kansas City Royals, KC）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/134.svg">
+        </td>
+        <td>匹兹堡海盗（Pittsburgh Pirates, PIT）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/142.svg">
+        </td>
+        <td>明尼苏达双城（Minnesota Twins, MIN）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/138.svg">
+        </td>
+        <td>圣路易红雀（St. Louis Cardinals, STL）</td>
+    </tr>
+    <tr>
+        <td rowspan="5">西区（West）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/117.svg">
+        </td>
+        <td>休斯敦太空人（Houston Astros, HOU）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/109.svg">
+        </td>
+        <td>亚利桑那响尾蛇（Arizona Diamondbacks, ARI）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/108.svg">
+        </td>
+        <td>洛杉矶天使（Los Angeles Angels, LAA）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/115.svg">
+        </td>
+        <td>科罗拉多洛矶（Colorado Rockies, COL）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/133.svg">
+        </td>
+        <td>奥克兰运动家（Oakland Athletics, OAK）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/119.svg">
+        </td>
+        <td>洛杉矶道奇（Los Angeles Dodgers, LAD）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/136.svg">
+        </td>
+        <td>西雅图水手（Seattle Mariners, SEA）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/135.svg">
+        </td>
+        <td>圣地亚哥教士（San Diego Padres, SD）</td>
+    </tr>
+    <tr>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/140.svg">
+        </td>
+        <td>得克萨斯游骑兵（Texas Rangers, TEX）</td>
+        <td style="">
+            <img style="display:block;margin:0 auto;width:24px;height:24px" src="https://www.mlbstatic.com/team-logos/137.svg">
+        </td>
+        <td>旧金山巨人（San Francisco Giants, SF）</td>
+    </tr>
+</table>
+
 ## 术语
 <table>
     <tr>
@@ -212,3 +377,25 @@
         <td></td>
     </tr>
 </table>
+
+- Positions, POS 位置
+    - Pitcher 投手
+    - Catcher 捕手
+    - Infielder 内野手
+        - First Base, 1B 一垒手
+        - Second Base, 2B 二垒手
+        - Third Base, 3B 三垒手
+        - Shortstop, SS 游击手
+    - Outfielder 外野手
+        - Left Field, LF 左外野手
+        - Center Field, CF 中外野手
+        - Right Field, RF 右外野手
+    - Two-Way Player 二刀流
+    - Designated Hitter, DH	指定打击
+- 打者技术统计
+    - At bat, AB 打数
+    - Hit, H 安打
+    - Batting average, BA 打击率 = 安打 / 打数
+- IL-10, 10-day injured list 十日伤病名单
+
+# The Show 22

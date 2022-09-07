@@ -5,3 +5,4 @@
 - [PyTorch Internals Part II - The Build System](https://pytorch.org/blog/a-tour-of-pytorch-internals-2/)
 - [想读读 PyTorch 底层代码？这份内核机制简介送给你](https://juejin.cn/post/6844903785198780424)
 - [《深度学习之 PyTorch 物体检测实战》](https://book.douban.com/subject/34917990/)
+- [PyTorch 源码解读系列](https://zhuanlan.zhihu.com/p/328674159) by OpenMMLab
