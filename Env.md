@@ -289,34 +289,7 @@ $ netstat -ano
 $ netstat -aon|findstr "22"
 ```
 
-**方式一：密码登录**。修改配置文件 `/etc/ssh/sshd_config` 允许使用密码登录：`PasswordAuthentication` 置为 yes
-
-**方式二：公钥登录**。生成密钥对，默认创建到 `/home/{user}/.ssh` 目录下，其中 `id_rsa` 为私钥，`id_rsa.pub` 为公钥：
-```bash
-$ ssh-keygen -t rsa
-
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/jyx/.ssh/id_rsa):
-Created directory '/home/jyx/.ssh'.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/jyx/.ssh/id_rsa
-Your public key has been saved in /home/jyx/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:J2GuipaiDmT3fODXQg4LLsHTM9fG+zsFxkMMZuEnFWw jyx@JIYixuan-ThinkPadX1-F6G67U7G
-The key's randomart image is:
-+---[RSA 3072]----+
-|       ==o.      |
-|      + .E       |
-|       o*.       |
-|. .   ooo*       |
-| * * + =S +      |
-|o = O B.oo .     |
-|.. o =.* ..      |
-|o +. .o o.       |
-|++. .    oo      |
-+----[SHA256]-----+
-```
+设置密码登录。修改配置文件 `/etc/ssh/sshd_config` 允许使用密码登录：`PasswordAuthentication` 置为 yes
 
 重启 ssh 服务：
 ```
