@@ -28,7 +28,11 @@
 
 ### 科学上网
 - [AgentNEO](https://agentneo.tech/)
-- [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 下载 Clash.for.Windows.Setup.x.y.z.exe 即可
+- [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 下载 Clash.for.Windows.Setup.x.y.z.exe 即可（x.y.z 为版本号）
+  - 如果 `pip install` 报错 `ValueError: check_hostname requires server_hostname` 需 Settings -> System Proxy -> 启用 Specify Protocol
+  - 如果 `urllib.request.urlopen` 访问 https 不走代理，需要修改注册表 `\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings` 中 `ProxyServer` 为 `http=http://127.0.0.1:7890;https=http://127.0.0.1:7890`，原因分析：
+    - https://note.bobo.moe/2021/02/clash-for-windows-pip-proxyerror.html
+    - https://github.com/Fndroid/clash_for_windows_pkg/issues/1787
 
 ### Shell 环境
 - XShell
