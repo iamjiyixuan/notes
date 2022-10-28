@@ -33,6 +33,7 @@
   - 如果 `urllib.request.urlopen` 访问 https 不走代理，需要修改注册表 `\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings` 中 `ProxyServer` 为 `http=http://127.0.0.1:7890;https=http://127.0.0.1:7890`，原因分析：
     - https://note.bobo.moe/2021/02/clash-for-windows-pip-proxyerror.html
     - https://github.com/Fndroid/clash_for_windows_pkg/issues/1787
+  - 在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` 目录下创建 `.bat` 文件，开机自动执行修改注册表的脚本 `REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /d "http=http://127.0.0.1:7890;https=http://127.0.0.1:7890" /f`
 
 ### Shell 环境
 - XShell
