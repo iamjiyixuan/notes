@@ -1,6 +1,33 @@
 # 我的工作环境
 
-## 硬件
+<!-- vscode-markdown-toc -->
+* 1. [硬件](#)
+* 2. [Windows](#Windows)
+	* 2.1. [硬件检测软件](#-1)
+	* 2.2. [科学上网](#-1)
+	* 2.3. [Shell 环境](#Shell)
+	* 2.4. [Python 环境](#Python)
+	* 2.5. [CPU 版本 PyTorch 环境](#CPUPyTorch)
+	* 2.6. [GPU 版本 PyTorch 环境](#GPUPyTorch)
+* 3. [WSL2](#WSL2)
+	* 3.1. [Windows 与 WSL 的文件互访](#WindowsWSL)
+	* 3.2. [远程连接 WSL2](#WSL2-1)
+	* 3.3. [WSL2 下 CUDA 环境](#WSL2CUDA)
+	* 3.4. [WSL2 下 Python 环境](#WSL2Python)
+	* 3.5. [WSL2 下 Docker 环境](#WSL2Docker)
+* 4. [macOS](#macOS)
+* 5. [其他工具](#-1)
+* 6. [参考](#-1)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+
+
+##  1. <a name=''></a>硬件
 - [MacBook Pro 2019](https://item.jd.com/100010079900.html)
 - [ThinkPad X1 Carbon 2021](https://item.jd.com/100016419235.html)
   - Intel Core™ i7-1165G7 2.80GHz 4核8线程 CPU
@@ -17,16 +44,16 @@
   - [京东京造 C1 有线机械键盘 87 键复古茶轴](https://item.jd.com/100017358781.html)
   - [漫步者（EDIFIER）R1000BT 蓝牙音箱](https://item.jd.com/3202817.html)
 
-## Windows
+##  2. <a name='Windows'></a>Windows
 
-### 硬件检测软件
+###  2.1. <a name='-1'></a>硬件检测软件
 - [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
 - [GPU-Z](https://www.techpowerup.com/gpuz/)
 - [CrystalDiskInfo](https://crystalmark.info/en/software/crystaldiskinfo/) 硬盘健康状况检测工具
 - [CrystalDiskMark](https://crystalmark.info/en/software/crystaldiskmark/) 硬盘读写性能评测工具
 - [3DMark](https://benchmarks.ul.com/zh-hans/3dmark) 显卡跑分，可以在 Steam 购买
 
-### 科学上网
+###  2.2. <a name='-1'></a>科学上网
 - [AgentNEO](https://agentneo.tech/)
 - [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 下载 Clash.for.Windows.Setup.x.y.z.exe 即可（x.y.z 为版本号）
   - 如果 `pip install` 报错 `ValueError: check_hostname requires server_hostname` 需 Settings -> System Proxy -> 启用 Specify Protocol
@@ -35,13 +62,13 @@
     - https://github.com/Fndroid/clash_for_windows_pkg/issues/1787
   - 在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` 目录下创建 `.bat` 文件，开机自动执行修改注册表的脚本 `REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /d "http=http://127.0.0.1:7890;https=http://127.0.0.1:7890" /f`
 
-### Shell 环境
+###  2.3. <a name='Shell'></a>Shell 环境
 - XShell
 - Cygwin64 Terminal
 - Git Bash
 - Cmder
 
-### Python 环境
+###  2.4. <a name='Python'></a>Python 环境
 
 下载安装 [Anaconda](https://www.anaconda.com/)，然后使用 `conda info` 命令查看 conda 默认配置（注意一定要从 Anaconda Navigator 中启动终端）：
 ```
@@ -109,7 +136,7 @@ envs_dirs:
   - D:\.conda\envs
 ```
 
-### CPU 版本 PyTorch 环境
+###  2.5. <a name='CPUPyTorch'></a>CPU 版本 PyTorch 环境
 
 创建一个新的 conda 虚拟环境
 ```console
@@ -142,7 +169,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 设置环境变量 `TORCH_HOME`，否则预训练模型会下载到 `C:\Users\<username>\.cache\torch` 下，占用你的 C 盘空间。https://pytorch.org/docs/stable/hub.html#where-are-my-downloaded-models-saved
 
-### GPU 版本 PyTorch 环境
+###  2.6. <a name='GPUPyTorch'></a>GPU 版本 PyTorch 环境
 
 英伟达官网下载安装最新的显卡驱动，然后检查 GPU 环境。注意 `nvidia-smi` 随显卡驱动安装 [Different CUDA versions shown by nvcc and NVIDIA-smi?](https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi)
 ```console
@@ -217,7 +244,7 @@ True
 tensor([1, 2, 3], device='cuda:0')
 ```
 
-## WSL2
+##  3. <a name='WSL2'></a>WSL2
 
 WSL：Windows Subsystem for Linux
 
@@ -262,7 +289,7 @@ $ wsl --set-version Ubuntu-20.04 2
 
 WSL2 的虚拟磁盘文件在 `C:\Users\{user}\AppData\Local\Packages\` 下面，不同的 WSL2 发行版对应的名称不同，例如 Pengwin 是 WhitewaterFoundryLtd.Co，Ubuntu 是 CanonicalGroupLimited，Debian 是 TheDebianProject。找到了你的 WSL2 的文件夹，就能在它下面找到 `LocalState\ext4.vhdx` 这个磁盘文件（初始 6.19G）。
 
-### Windows 与 WSL 的文件互访
+###  3.1. <a name='WindowsWSL'></a>Windows 与 WSL 的文件互访
 
 WSL 中访问 Windows 文件：
 ```
@@ -273,7 +300,7 @@ Windows 访问 WSL 文件：
 - Ubuntu 终端中执行 `explorer.exe .`
 - 或者 Windows 资源管理器直接打开 `\\wsl$\Ubuntu-20.04\home`
 
-### 远程连接 WSL2
+###  3.2. <a name='WSL2-1'></a>远程连接 WSL2
 
 安装网络工具（ifconfig、netstat 等）
 ```bash
@@ -428,7 +455,7 @@ $ netsh interface portproxy show all
 $ ssh -v jsm@192.168.50.108 -p 2222
 ```
 
-### WSL2 下 CUDA 环境
+###  3.3. <a name='WSL2CUDA'></a>WSL2 下 CUDA 环境
 更新 apt 源：
 ```bash
 $ sudo apt update
@@ -487,7 +514,7 @@ Cuda compilation tools, release 11.3, V11.3.58
 Build cuda_11.3.r11.3/compiler.29745058_0
 ```
 
-### WSL2 下 Python 环境
+###  3.4. <a name='WSL2Python'></a>WSL2 下 Python 环境
 
 Anconda 官网下载 [64-Bit(x86) Installer](https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh)，终端安装：
 ```
@@ -554,13 +581,13 @@ envs_dirs:
   - /mnt/d/.conda4wsl/envs
 ```
 
-### WSL2 下 Docker 环境
+###  3.5. <a name='WSL2Docker'></a>WSL2 下 Docker 环境
 ...
 
-## macOS 
+##  4. <a name='macOS'></a>macOS 
 
-## 其他工具
+##  5. <a name='-1'></a>其他工具
 - [快贴](https://home.clipber.com/)
 
-## 参考
+##  6. <a name='-1'></a>参考
 - [【知乎】填坑向：Win 11 + RTX3060 的深度学习环境配置](https://zhuanlan.zhihu.com/p/432831828)
