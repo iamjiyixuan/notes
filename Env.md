@@ -7,6 +7,12 @@
     - [硬件检测软件](#%E7%A1%AC%E4%BB%B6%E6%A3%80%E6%B5%8B%E8%BD%AF%E4%BB%B6)
     - [科学上网](#%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91)
     - [Shell 环境](#shell-%E7%8E%AF%E5%A2%83)
+    - [C++ 环境](#c-%E7%8E%AF%E5%A2%83)
+        - [CMake](#cmake)
+    - [如何判断可执行文件是 32bit 还是 64bit](#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%98%AF-32bit-%E8%BF%98%E6%98%AF-64bit)
+    - [OpenCV 环境](#opencv-%E7%8E%AF%E5%A2%83)
+        - [官方预构建 x64 版本](#%E5%AE%98%E6%96%B9%E9%A2%84%E6%9E%84%E5%BB%BA-x64-%E7%89%88%E6%9C%AC)
+        - [源码构建 x86 版本](#%E6%BA%90%E7%A0%81%E6%9E%84%E5%BB%BA-x86-%E7%89%88%E6%9C%AC)
     - [Python 环境](#python-%E7%8E%AF%E5%A2%83)
     - [CPU 版本 PyTorch 环境](#cpu-%E7%89%88%E6%9C%AC-pytorch-%E7%8E%AF%E5%A2%83)
     - [GPU 版本 PyTorch 环境](#gpu-%E7%89%88%E6%9C%AC-pytorch-%E7%8E%AF%E5%A2%83)
@@ -62,6 +68,98 @@
 - Cygwin64 Terminal
 - Git Bash
 - Cmder
+
+### C++ 环境
+
+#### CMake
+
+CMake 可以随 Visual Studio 一起安装在相关目录下，例如 `D:\Software\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe`。但该方式安装不包含 gui 工具，且如果希望在终端命令行使用，还需手动设置系统环境变量。因此推荐[官网下载](https://cmake.org/download/)安装完整版本。
+
+如果下载 raw.githubusercontent.com 资源报 hosts 找不到，可以通过 https://www.ipaddress.com/ 查找对应 IP，然后修改 `C:\Windows\System32\drivers\etc\hosts` 文件临时解决问题
+
+### 如何判断可执行文件是 32bit 还是 64bit
+```
+$ cd "D:\Software\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64"
+$ .\dumpbin.exe /headers C:\Windows\system32\cmd.exe
+
+Microsoft (R) COFF/PE Dumper Version 14.33.31630.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Windows\system32\cmd.exe
+
+PE signature found
+
+File Type: EXECUTABLE IMAGE
+
+FILE HEADER VALUES
+            8664 machine (x64)
+               7 number of sections
+        43111367 time date stamp
+               0 file pointer to symbol table
+               0 number of symbols
+              F0 size of optional header
+              22 characteristics
+                   Executable
+                   Application can handle large (>2GB) addresses
+
+OPTIONAL HEADER VALUES
+             20B magic # (PE32+)
+[...]
+```
+
+### OpenCV 环境
+
+#### 官方预构建 x64 版本
+
+从 https://github.com/opencv/opencv/releases 下载最新版本的 `opencv-x.x.x-vc14_vc15.exe` 文件并双击执行安装。
+
+Visual Studio 创建新的 C++ 控制台应用项目 `HelloOpenCV`，并完成以下配置：
+- 修改系统环境变量，将 `D:\Software\opencv\build\x64\vc15\bin` 添加到 PATH 中，否则会报找不到 dll 的错误
+- 项目 → HelloOpenCV 属性 → 配置属性 → C++ → 常规 → 附加包含目录，添加 `D:\Software\opencv\build\include`
+- 项目 → HelloOpenCV 属性 → 配置属性 → 链接器 → 常规 → 附加库目录，添加 `D:\Software\opencv\build\x64\vc15\lib`
+- 项目 → HelloOpenCV 属性 → 配置属性 → 链接器 → 输入 → 附加依赖项，配置为 Debug 添加 `opencv_world460d.lib`，配置为 Release 添加 `opencv_world460.lib`
+
+修改 `HelloOpenCV.cpp`：
+```C++
+// HelloOpenCV.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+// 参考：https://docs.opencv.org/4.x/dd/d6e/tutorial_windows_visual_studio_opencv.html
+
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    if (argc != 2)
+    {
+        cout << " Usage: " << argv[0] << " ImageToLoadAndDisplay" << endl;
+        return -1;
+    }
+    Mat image;
+    image = imread(argv[1], IMREAD_COLOR); // Read the file
+    if (image.empty()) // Check for invalid input
+    {
+        cout << "Could not open or find the image" << std::endl;
+        return -1;
+    }
+    namedWindow("Display window", WINDOW_AUTOSIZE); // Create a window for display.
+    imshow("Display window", image); // Show our image inside it.
+    waitKey(0); // Wait for a keystroke in the window
+    return 0;
+}
+```
+
+程序接收一个命令参数作为显示图片的文件路径，如果程序执行成功，则 OpenCV 基础环境配置成功。
+
+#### 源码构建 x86 版本
+
+目前 OpenCV 官方已经不再提供 x86（32bit）版本的 Pre-built Libraries，需要我们自己参考[官方教程](https://docs.opencv.org/4.x/d3/d52/tutorial_windows_install.html#tutorial_windows_install_build)完成构建。CMake 使用 3.24.3 版本。
 
 ### Python 环境
 
