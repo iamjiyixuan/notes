@@ -41,7 +41,7 @@
   - [丽台（LEADTEK）NVIDIA T1000 4G](https://item.jd.com/100012341167.html)
 - [华硕（ASUS）RT-AC86U 无线路由器](https://item.jd.com/5026604.html)
 - 配件
-  - [三星 27.9英寸 4K UHD 超高清显示器 U28H750UQC](https://www.samsung.com/cn/monitors/monitor-u28h750uqc/LU28H750UQCXXF/)
+  - [三星 27英寸 S80PB 平面高分辨率显示器 S27B800PXC](https://www.samsung.com/cn/monitors/high-resolution/s80pb-27-27-inch-ips-uhd-hdr-ls27b800pxcxxf/)
   - [雷蛇（Razer）蝰蛇2000 游戏鼠标 黑色版](https://item.jd.com/3756787.html)
   - [京东京造 C1 有线机械键盘 87 键复古茶轴](https://item.jd.com/100017358781.html)
   - [漫步者（EDIFIER）R1000BT 蓝牙音箱](https://item.jd.com/3202817.html)
