@@ -201,13 +201,22 @@ active environment : base
            offline mode : False
 ```
 
+执行 `conda init powershell` 生成 `C:\Users\jyx\Documents\WindowsPowerShell\profile.ps1` 文件（如果卸载 conda 记得要删除该文件），使 PowerShell 打开默认进入 base 环境。
+```
+// profile.ps1
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+(& "C:\ProgramData\Anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
+#endregion
+```
+
 初始 `C:\Users\jsm\.condarc` 内容如下：
 ```
 channels:
   - defaults
 ```
 
-修改 `C:\Users\jsm\.condarc` 设置清华镜像下载源，并将 package cache 和 envs directories 指定到 D 盘（防止 C 盘爆满）
+修改 `C:\Users\jsm\.condarc` 设置清华镜像下载源，并将 package cache 和 envs directories 指定到 D 盘（防止占用 C 盘空间）
 ```
 channels:
   - defaults
@@ -258,8 +267,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 '1.11.0'
 >>> exit()
 ```
-
-[在 WIN10 PowerShell 中使用并激活 Anaconda 虚拟环境](https://zhuanlan.zhihu.com/p/149656019) 注意，在此之前要将 `D:\Software\Anaconda3`、`D:\Software\Anaconda3\Scripts`、`D:\Software\Anaconda3\Library\bin` 添加到系统环境变量的 PATH 中。（D:\Software\Anaconda3 为 Anaconda3 的安装目录，根据实际情况替换）
 
 设置环境变量 `TORCH_HOME`，否则预训练模型会下载到 `C:\Users\<username>\.cache\torch` 下，占用你的 C 盘空间。https://pytorch.org/docs/stable/hub.html#where-are-my-downloaded-models-saved
 
@@ -322,7 +329,7 @@ $ conda activate hello-torch-cuda
 
 安装 cuda 版本 PyTorch
 ```
-$ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+$ conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
 ```
 
 老显卡（例如 NVIDIA Quadro K420）因为算力不够会报 `PyTorch no longer supports this GPU because it is too old.` 可以尝试自己编译 PyTorch [Building PyTorch from source on Windows to work with an old GPU](https://datagraphi.com/blog/post/2021/9/13/building-pytorch-from-source-on-windows-to-work-with-an-old-gpu)
