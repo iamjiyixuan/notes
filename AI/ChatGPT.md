@@ -1,10 +1,24 @@
 # ChatGPT
 
-- ChatGPT 保姆级注册教程 https://foofish.net/how-to-registe-chatGPT.html 
-- https://github.com/f/awesome-chatgpt-prompts - This repo includes ChatGPT prompt curation to use ChatGPT better.
+- 原理
+    - [How does ChatGPT work?](https://blog.bytebytego.com/p/ep-44-how-does-chatgpt-work#%C2%A7how-does-chatgpt-work) by ByteByteGo
+- 教程
+    - ChatGPT 保姆级注册教程 https://foofish.net/how-to-registe-chatGPT.html 
 - API
     - https://github.com/transitive-bullshit/chatgpt-api - Node.js client for the unofficial ChatGPT API. 🔥
     - https://github.com/adamrushy/OpenAISwift - This is a wrapper library around the ChatGPT and OpenAI HTTP API
-- 微信 + ChatGPT
-    - https://github.com/fuergaosi233/wechat-chatgpt - 在微信上迅速接入 ChatGPT，让它成为你最好的助手！
-    - https://github.com/zhayujie/chatgpt-on-wechat - 使用 ChatGPT 搭建微信聊天机器人，基于OpenAI API和itchat实现。
+- 竞品
+    - Quora
+- lib
+    - [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) includes ChatGPT prompt curation to use ChatGPT better.
+    - [Visual ChatGPT](https://github.com/microsoft/visual-chatgpt) connects ChatGPT and a series of Visual Foundation Models to enable sending and receiving images during chatting.
+- App
+    - 翻译相关
+        - [OpenAI Translator](https://github.com/yetone/openai-translator) 基于 ChatGPT API 的划词翻译浏览器插件和跨平台桌面端应用
+    - [Poe](https://poe.com/) Fast AI Chat, with access to several bots powered by OpenAI and Anthropic. 目前支持 Sage、Cluade、Chatgpt、Dragonfly
+    - [PandaGPT.io](https://www.pandagpt.io/) Generate Knowledge Graph Powered by ChatGPT. Upload a file, ask anything.
+    - [reccap.it](https://reccap.it/) 它可以帮你把Youtube视频转换为图文，方便浏览检索和分享，最近在 ChatGPT 的加持下新增了自动生成 key points 的功能 [🔗](https://twitter.com/liboshen/status/1634595103602819075?s=20)
+    - 微信接入
+        - [wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt) 在微信上迅速接入 ChatGPT，让它成为你最好的助手！
+        - [chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat) 使用 ChatGPT 搭建微信聊天机器人，基于 OpenAI API 和 itchat 实现。
+- 观点 & 讨论
