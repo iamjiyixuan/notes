@@ -1,24 +1,38 @@
 # ChatGPT
 
-- 原理
-    - [How does ChatGPT work?](https://blog.bytebytego.com/p/ep-44-how-does-chatgpt-work#%C2%A7how-does-chatgpt-work) by ByteByteGo
+- 发展历程
+    - ...
 - 教程
     - ChatGPT 保姆级注册教程 https://foofish.net/how-to-registe-chatGPT.html 
 - API
     - https://github.com/transitive-bullshit/chatgpt-api - Node.js client for the unofficial ChatGPT API. 🔥
     - https://github.com/adamrushy/OpenAISwift - This is a wrapper library around the ChatGPT and OpenAI HTTP API
 - 竞品
+    - [Google Bard](https://blog.google/technology/ai/bard-google-ai-search-updates/)
     - Quora
 - lib
     - [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) includes ChatGPT prompt curation to use ChatGPT better.
     - [Visual ChatGPT](https://github.com/microsoft/visual-chatgpt) connects ChatGPT and a series of Visual Foundation Models to enable sending and receiving images during chatting.
 - App
+    - 集成
+        - [ChatGPT Desktop Application](https://github.com/lencx/ChatGPT) by lencx
+        - [Poe](https://poe.com/) Fast AI Chat, with access to several bots powered by OpenAI and Anthropic. 目前支持 Sage、Cluade、Chatgpt、Dragonfly
     - 翻译相关
         - [OpenAI Translator](https://github.com/yetone/openai-translator) 基于 ChatGPT API 的划词翻译浏览器插件和跨平台桌面端应用
-    - [Poe](https://poe.com/) Fast AI Chat, with access to several bots powered by OpenAI and Anthropic. 目前支持 Sage、Cluade、Chatgpt、Dragonfly
-    - [PandaGPT.io](https://www.pandagpt.io/) Generate Knowledge Graph Powered by ChatGPT. Upload a file, ask anything.
-    - [reccap.it](https://reccap.it/) 它可以帮你把Youtube视频转换为图文，方便浏览检索和分享，最近在 ChatGPT 的加持下新增了自动生成 key points 的功能 [🔗](https://twitter.com/liboshen/status/1634595103602819075?s=20)
+        - [bilingual_book_maker](https://github.com/yihong0618/bilingual_book_maker) 是一个 AI 翻译工具，使用 ChatGPT 帮助用户制作多语言版本的 epub/txt 文件和图书。
+    - pdf
+        - [PandaGPT.io](https://www.pandagpt.io/) Generate Knowledge Graph Powered by ChatGPT. Upload a file, ask anything.
+    - [reccap.it](https://reccap.it/) 它可以帮你把 Youtube 视频转换为图文，方便浏览检索和分享，最近在 ChatGPT 的加持下新增了自动生成 key points 的功能 [🔗](https://twitter.com/liboshen/status/1634595103602819075?s=20)
+    - 平台
+        - [OpenGpt](https://github.com/futantan/OpenGpt) Create your own ChatGPT App in seconds.
     - 微信接入
         - [wechat-chatgpt](https://github.com/fuergaosi233/wechat-chatgpt) 在微信上迅速接入 ChatGPT，让它成为你最好的助手！
         - [chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat) 使用 ChatGPT 搭建微信聊天机器人，基于 OpenAI API 和 itchat 实现。
+    - Coding
+        - [bloop.ai](https://bloop.ai/) Understand codebases with GPT-4 and semantic code search
+        - [Cursor](https://www.cursor.so/) Write, edit, and chat about your code with GPT-4 in a new type of editor
+    - 移动端
+        - [OpenCat](https://opencat.app/) by [@waylybaye](https://twitter.com/waylybaye)
 - 观点 & 讨论
+    - [What Is ChatGPT Doing … and Why Does It Work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) by Stephen Wolfram 2023-02
+    - [How does ChatGPT work?](https://blog.bytebytego.com/p/ep-44-how-does-chatgpt-work#%C2%A7how-does-chatgpt-work) by ByteByteGo
