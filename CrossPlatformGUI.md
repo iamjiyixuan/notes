@@ -6,3 +6,4 @@
 - [libcef (Chromium Embedded Framework)](https://bitbucket.org/chromiumembedded/cef/src/master/) - C++
 - [React Native](https://reactnative.dev/) - JavaScript
 - [Flutter](https://flutter.dev/) - Dart
+- [Tauri](https://tauri.app/) - Rust

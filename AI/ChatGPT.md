@@ -3,26 +3,36 @@
 - 发展历程
     - ...
 - 教程
-    - ChatGPT 保姆级注册教程 https://foofish.net/how-to-registe-chatGPT.html 
+    - ChatGPT 保姆级注册教程 https://foofish.net/how-to-registe-chatGPT.html
+    - 开通 ChatGPT Plus
+        - [2023 年五分钟注册美区 AppleID，手把手教，稳定且耐用！](https://zhuanlan.zhihu.com/p/367821925)
+        - [ChatGPT Plus & ChatGPT 4.0 注册及使用指南](https://www.mygoogleseo.com/chatgpt-plus/)
 - API
     - https://github.com/transitive-bullshit/chatgpt-api - Node.js client for the unofficial ChatGPT API. 🔥
     - https://github.com/adamrushy/OpenAISwift - This is a wrapper library around the ChatGPT and OpenAI HTTP API
 - 竞品
     - [Google Bard](https://blog.google/technology/ai/bard-google-ai-search-updates/)
+    - [Meta LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
     - Quora
 - lib
     - [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) includes ChatGPT prompt curation to use ChatGPT better.
     - [Visual ChatGPT](https://github.com/microsoft/visual-chatgpt) connects ChatGPT and a series of Visual Foundation Models to enable sending and receiving images during chatting.
+    - [chatbot-ui](https://github.com/mckaywrigley/chatbot-ui) An open source ChatGPT UI.
+    - [llama.cpp](https://github.com/ggerganov/llama.cpp) Port of Facebook's LLaMA model in C/C++
+    - framework
+        - [LangChain](https://github.com/hwchase17/langchain) Building applications with LLMs through composability
 - App
-    - 集成
+    - 客户端
         - [ChatGPT Desktop Application](https://github.com/lencx/ChatGPT) by lencx
         - [Poe](https://poe.com/) Fast AI Chat, with access to several bots powered by OpenAI and Anthropic. 目前支持 Sage、Cluade、Chatgpt、Dragonfly
+        - [OpenCat](https://opencat.app/) by [@waylybaye](https://twitter.com/waylybaye)
+    - 工具
+        - [PandaGPT.io](https://www.pandagpt.io/) Generate Knowledge Graph Powered by ChatGPT. Upload a file, ask anything.
+        - [reccap.it](https://reccap.it/) 它可以帮你把 Youtube 视频转换为图文，方便浏览检索和分享，最近在 ChatGPT 的加持下新增了自动生成 key points 的功能 [🔗](https://twitter.com/liboshen/status/1634595103602819075?s=20)
+        - [AI Vocabulary Builder](https://github.com/piglei/ai-vocabulary-builder) AI 生词本（“AI Vocabulary Builder” 简称 aivoc）是一个利用了 AI 技术的智能生词本工具，它能帮你快速构建起自己的生词库，学习起来事半功倍。
     - 翻译相关
         - [OpenAI Translator](https://github.com/yetone/openai-translator) 基于 ChatGPT API 的划词翻译浏览器插件和跨平台桌面端应用
         - [bilingual_book_maker](https://github.com/yihong0618/bilingual_book_maker) 是一个 AI 翻译工具，使用 ChatGPT 帮助用户制作多语言版本的 epub/txt 文件和图书。
-    - pdf
-        - [PandaGPT.io](https://www.pandagpt.io/) Generate Knowledge Graph Powered by ChatGPT. Upload a file, ask anything.
-    - [reccap.it](https://reccap.it/) 它可以帮你把 Youtube 视频转换为图文，方便浏览检索和分享，最近在 ChatGPT 的加持下新增了自动生成 key points 的功能 [🔗](https://twitter.com/liboshen/status/1634595103602819075?s=20)
     - 平台
         - [OpenGpt](https://github.com/futantan/OpenGpt) Create your own ChatGPT App in seconds.
     - 微信接入
@@ -31,8 +41,10 @@
     - Coding
         - [bloop.ai](https://bloop.ai/) Understand codebases with GPT-4 and semantic code search
         - [Cursor](https://www.cursor.so/) Write, edit, and chat about your code with GPT-4 in a new type of editor
-    - 移动端
-        - [OpenCat](https://opencat.app/) by [@waylybaye](https://twitter.com/waylybaye)
+    - 优化 & 改良
+        - [FastChat](https://github.com/lm-sys/FastChat) We released Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality.
 - 观点 & 讨论
+    - [Summary of ChatGPT/GPT-4 Research and Perspective Towards the Future of Large Language Models](https://arxiv.org/abs/2304.01852)
+    - [The End of Front-End Development](https://www.joshwcomeau.com/blog/the-end-of-frontend-development/) by josh w comeau 2023-03 [🔗](https://twitter.com/geekplux_cn/status/1644175852303679490?s=20)
     - [What Is ChatGPT Doing … and Why Does It Work?](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) by Stephen Wolfram 2023-02
     - [How does ChatGPT work?](https://blog.bytebytego.com/p/ep-44-how-does-chatgpt-work#%C2%A7how-does-chatgpt-work) by ByteByteGo
