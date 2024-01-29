@@ -29,10 +29,20 @@
 <!-- /TOC -->
 
 ## 硬件
-- [MacBook Pro 2019](https://item.jd.com/100010079900.html)
-- [ThinkPad X1 Carbon 2021](https://item.jd.com/100016419235.html)
-  - Intel Core™ i7-1165G7 2.80GHz 4核8线程 CPU
-  - 外接 [雷蛇（Razer）战核X 显卡拓展坞](https://item.jd.com/100005298502.html) + [技嘉 GIGABYTE GeForce RTX 2060](https://item.jd.com/100031182780.html)
+- 笔记本
+  - [MacBook Pro 2019](https://item.jd.com/100010079900.html)
+  - [ThinkPad X1 Carbon 2021](https://item.jd.com/100016419235.html)
+    - Intel Core™ i7-1165G7 2.80GHz 4核8线程 CPU
+    - 外接 [雷蛇（Razer）战核X 显卡拓展坞](https://item.jd.com/100005298502.html) + [技嘉 GeForce RTX 2060](https://item.jd.com/100031182780.html)
+- PC（2024-01）
+  - CPU：[i7-13700KF](https://item.jd.com/100040185493.html)
+  - 主板：[微星 Z790 CARBON  暗黑](https://item.jd.com/100040431239.html)
+  - 显卡：[技嘉 GeForce RTX 2060](https://item.jd.com/100031182780.html)
+  - 内存：[宏碁掠夺者 16G×2 DDR5 6800 频率](https://item.jd.com/100045347362.html)
+  - 固态：[宏碁掠夺者 GM7 1TB](https://item.jd.com/100049404381.html)
+  - 散热：[追风者 D30 360 一体式水冷](https://item.jd.com/100058941167.html)
+  - 电源：[追风者 AMP GH 金牌 850W](https://item.jd.com/100058941165.html)
+  - 机箱：[追风者 P600S 曜石黑](https://item.jd.com/100003292786.html)
 - [HP Z240 Small Form Factor Workstation 2016](https://support.hp.com/cn-zh/document/c04909569)
   - Intel Core™ i5-6500 3.20GHz 4核4线程 CPU
   - [金士顿（Kingston）FURY 16GB（8G×2）套装 DDR4](https://item.jd.com/100005116786.html)
