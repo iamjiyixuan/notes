@@ -73,6 +73,7 @@
     - https://note.bobo.moe/2021/02/clash-for-windows-pip-proxyerror.html
     - https://github.com/Fndroid/clash_for_windows_pkg/issues/1787
   - 在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` 目录下创建 `.bat` 文件，开机自动执行修改注册表的脚本 `REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /d "http=http://127.0.0.1:7890;https=http://127.0.0.1:7890" /f`
+  - 如需使用 UWP 应用（例如 Microsoft Store），常规 -> 启用 UWP 应用网络回环。在 Windows 10+ 系统中，微软出于安全性考虑，不允许 UWP 应用访问本地回环地址，这导致 UWP 应用无法直接使用代理，需要其他工具来破除这一限制。详见：https://rsgdxp.github.io/2020/06/12/windows-clash-for-windows-shi-yong-jiao-cheng/#UWP-%E5%BA%94%E7%94%A8
 
 ### Shell 环境
 - XShell
