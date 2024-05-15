@@ -365,6 +365,8 @@ WSL：Windows Subsystem for Linux
 > **Note**
 > 
 > 如果报错 `WslRegisterDistribution failed with error: 0x8007019e`，PowerShell 管理员权限下执行 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+>
+> 如果报错 `WslRegisterDistribution failed with error: 0x800701bc`，需前往 https://aka.ms/wsl2kernel 下载安装 WSL 2 Linux 内核
 
 检查当前 wsl 版本：
 ```
